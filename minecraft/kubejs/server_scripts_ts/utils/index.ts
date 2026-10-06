@@ -16,8 +16,7 @@ export type MekanismRecipeApi = {
 export const multiple = (item: Item, amount: number): string => `${amount}x ${item}`;
 
 export const itemTag = (id: string): ItemTag => {
-    if (id.startsWith('#')) return `${id}` as ItemTag;
-    return `#${id}` as ItemTag;
+    return id.startsWith('#') ? `${id}` as ItemTag : `#${id}` as ItemTag;
 };
 
 export const createRecipeApi = (recipes: unknown): CreateRecipeApi =>

@@ -2,8 +2,7 @@
   // utils/index.ts
   var multiple = (item, amount) => `${amount}x ${item}`;
   var itemTag = (id) => {
-    if (id.startsWith("#")) return `${id}`;
-    return `#${id}`;
+    return id.startsWith("#") ? `${id}` : `#${id}`;
   };
   var createRecipeApi = (recipes) => recipes;
   var mekanismRecipeApi = (recipes) => recipes;
