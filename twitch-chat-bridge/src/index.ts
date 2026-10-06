@@ -1,7 +1,12 @@
 import readline from "node:readline";
 import { Rcon } from "rcon-client";
 import tmi from "tmi.js";
-import { formatMinecraftCommand, formatReadyCommand, getChatRole } from "./format-message";
+import {
+  formatDisconnectedCommand,
+  formatMinecraftCommand,
+  formatReadyCommand,
+  getChatRole
+} from "./format-message";
 import { emotesById } from "./emote-map";
 
 const dryRun = (process.env.DRY_RUN ?? "true").toLowerCase() === "true";
@@ -119,13 +124,19 @@ async function runBridge(): Promise<void> {
   });
 
   client.on("connected", () => console.log(`Connected to Twitch chat: #${channel}`));
-  client.on("disconnected", (reason) => console.warn("Twitch chat disconnected:", reason));
+  client.on("disconnected", (reason) => {
+    console.warn("Twitch chat disconnected:", reason);
+    enqueueCommand(
+      formatDisconnectedCommand(reason),
+      "Could not announce Twitch chat disconnection in Minecraft"
+    );
+  });
 
   await client.connect();
   await client.join(channel);
   console.log("Twitch-to-Minecraft chat relay is running");
   await enqueueCommand(
-    formatReadyCommand(channel),
+    formatReadyCommand(),
     "Could not announce Twitch bridge readiness in Minecraft"
   );
 
@@ -135,6 +146,7 @@ async function runBridge(): Promise<void> {
     } catch (error) {
       console.error("Could not disconnect from Twitch chat:", errorMessage(error));
     }
+    await sendQueue;
     try {
       if (rcon?.authenticated && rcon.socket?.writable && !rcon.socket.destroyed) {
         await rcon.end();

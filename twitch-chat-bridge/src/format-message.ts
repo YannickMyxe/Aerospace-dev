@@ -167,8 +167,7 @@ function formatMinecraftCommand(
   return { command, truncated };
 }
 
-function formatReadyCommand(channel: string): string {
-  const safeChannel = cleanText(channel.replace(/^#/, ""), 25) || "channel";
+function formatReadyCommand(): string {
   const component = {
     text: "",
     extra: [
@@ -180,4 +179,17 @@ function formatReadyCommand(channel: string): string {
   return `tellraw @a ${JSON.stringify(component)}`;
 }
 
-export { formatMinecraftCommand, formatReadyCommand, getChatRole };
+function formatDisconnectedCommand(reason: string): string {
+  const safeReason = cleanText(reason, 100) || "unknown reason";
+  const component = {
+    text: "",
+    extra: [
+      { text: "[Twitch-Bridge]", color: "red" },
+      { text: ` Chat relay disconnected: ${safeReason}`, color: "red" }
+    ]
+  };
+
+  return `tellraw @a ${JSON.stringify(component)}`;
+}
+
+export { formatDisconnectedCommand, formatMinecraftCommand, formatReadyCommand, getChatRole };
