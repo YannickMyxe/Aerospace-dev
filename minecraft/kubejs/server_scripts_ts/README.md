@@ -24,14 +24,14 @@ bun run watch
 
 Run `bun run check` to type-check without emitting files. KubeJS typings are read
 from the generated declarations in `../../.probe`. The build bundles each
-top-level `.ts` script and its relative utility imports into a standalone IIFE, so
-KubeJS never loads TypeScript's CommonJS `exports` code or the source utility
-module as a separate script. Every top-level `.ts` file except declaration files
-is automatically treated as an entry point, so add new KubeJS scripts there and
-put shared utilities in subfolders. `bun run watch` watches and rebuilds the
-entry points; run `bun run check` separately for type errors. Keep scripts in
-the global KubeJS style (for example, `ServerEvents.recipes(...)`). Type-only
-imports are erased during bundling.
+all `.ts` scripts under `scripts/` and their relative utility imports into
+standalone IIFEs, so KubeJS never loads TypeScript's CommonJS `exports` code or
+utility modules as separate scripts. Add new KubeJS scripts anywhere under
+`scripts/`; shared utilities can stay in `utils/` or another folder outside
+`scripts/`. `bun run watch` watches and rebuilds entry points, including new
+files; run `bun run check` separately for type errors. Keep scripts in the global
+KubeJS style (for example, `ServerEvents.recipes(...)`). Type-only imports are
+erased during bundling.
 
 The current generated declarations contain a tuple label named `with`, which
 TypeScript cannot parse. In `../../.probe/@package/ca/teamdman/sfml/ast/index.d.ts`,

@@ -5,12 +5,13 @@
     if (id.startsWith("#")) return `${id}`;
     return `#${id}`;
   };
+  var mekanismRecipeApi = (recipes) => recipes;
 
-  // ars-logs.ts
+  // scripts/ars-logs.ts
   ServerEvents.recipes((event) => {
     const logs = itemTag("c:logs/archwood");
     const planks = "ars_nouveau:archwood_planks";
-    const mekanismRecipes = event.recipes.mekanism;
+    const mekanismRecipes = mekanismRecipeApi(event.recipes.mekanism);
     mekanismRecipes.sawing(multiple(planks, 6), logs);
   });
 })();
