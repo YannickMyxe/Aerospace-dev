@@ -53,3 +53,5 @@ coverage/
 dist/
 out/
 /twitch-chat-bridge/.env
+
+.env
