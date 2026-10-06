@@ -17,6 +17,33 @@ function cleanText(value: string, maxLength: number): string {
   ).slice(0, maxLength).join("");
 }
 
+function formatEmotes(message: string, emotes: ChatUserstate["emotes"]): string {
+  const ranges = Object.values(emotes ?? {})
+    .flat()
+    .map((range) => {
+      const match = /^(\d+)-(\d+)$/.exec(range);
+      if (!match) return null;
+
+      const start = Number(match[1]);
+      const end = Number(match[2]);
+      if (start > end || end >= message.length) return null;
+      return { start, end };
+    })
+    .filter((range): range is { start: number; end: number } => range !== null)
+    .sort((left, right) => left.start - right.start);
+
+  let result = "";
+  let cursor = 0;
+  for (const range of ranges) {
+    if (range.start < cursor) continue;
+    result += message.slice(cursor, range.start);
+    result += `[${message.slice(range.start, range.end + 1)}]`;
+    cursor = range.end + 1;
+  }
+
+  return result + message.slice(cursor);
+}
+
 function getChatRole(userstate: ChatUserstate): ChatRole | null {
   const badges = userstate.badges ?? {};
 
@@ -39,10 +66,11 @@ function getChatRole(userstate: ChatUserstate): ChatRole | null {
 function formatMinecraftCommand(
   username: string,
   message: string,
-  role: ChatRole | null = null
+  role: ChatRole | null = null,
+  emotes?: ChatUserstate["emotes"]
 ): string | null {
   const safeUsername = cleanText(username, 25) || "unknown";
-  const safeMessage = cleanText(message, MAX_MESSAGE_LENGTH);
+  const safeMessage = cleanText(formatEmotes(message, emotes), MAX_MESSAGE_LENGTH);
   if (!safeMessage) return null;
 
   const extra: Array<{ text: string; color?: string }> = [

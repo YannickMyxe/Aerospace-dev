@@ -62,7 +62,8 @@ async function runBridge(): Promise<void> {
     const command = formatMinecraftCommand(
       tags["display-name"] || tags.username || "unknown",
       message,
-      getChatRole(tags)
+      getChatRole(tags),
+      tags.emotes
     );
     if (!command) return;
 

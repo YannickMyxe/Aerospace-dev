@@ -40,6 +40,40 @@ test("moderator role takes priority over VIP and subscriber", () => {
   })).toBe("MOD");
 });
 
+test("wraps Twitch emotes using the provided message offsets", () => {
+  const message = "Hello Kappa and PogChamp!";
+  const command = formatMinecraftCommand("viewer", message, null, {
+    "25": ["6-10"],
+    "305954156": ["16-23"]
+  });
+  expect(command).not.toBeNull();
+  const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
+
+  expect(component.extra[1].text).toBe(" viewer: Hello [Kappa] and [PogChamp]!");
+});
+
+test("wraps UTF-16-indexed emotes after supplementary Unicode characters", () => {
+  const message = "🎉 Kappa";
+  const start = message.indexOf("Kappa");
+  const command = formatMinecraftCommand("viewer", message, null, {
+    "25": [`${start}-${start + "Kappa".length - 1}`]
+  });
+  expect(command).not.toBeNull();
+  const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
+
+  expect(component.extra[1].text).toBe(" viewer: 🎉 [Kappa]");
+});
+
+test("ignores malformed and out-of-range emote offsets", () => {
+  const command = formatMinecraftCommand("viewer", "Kappa", null, {
+    "25": ["bad-range", "0-10"]
+  });
+  expect(command).not.toBeNull();
+  const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
+
+  expect(component.extra[1].text).toBe(" viewer: Kappa");
+});
+
 test("strips line breaks and control characters from chat input", () => {
   const command = formatMinecraftCommand("user", "hello\nsay hacked\u0000there");
   expect(command).not.toBeNull();
