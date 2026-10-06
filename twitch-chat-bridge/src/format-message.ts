@@ -2,6 +2,12 @@ import type { ChatUserstate } from "tmi.js";
 import type { EmoteRegistryEntry } from "./emote-map";
 
 const MAX_MESSAGE_LENGTH = 300;
+const MAX_RCON_COMMAND_BYTES = 1200;
+
+interface FormattedCommand {
+  command: string;
+  truncated: boolean;
+}
 
 type ChatRole = "BROADCASTER" | "MOD" | "VIP" | "SUB";
 
@@ -66,12 +72,7 @@ function formatEmotes(
     if (range.start < cursor) continue;
     const registryEntry = emoteMap.get(range.id);
     const separator = message.slice(cursor, range.start);
-    const previous = result.at(-1);
-    if (registryEntry && previous?.font === "twitch:emotes" && /^\s+$/.test(separator)) {
-      appendFontText(separator.replace(/[\u0000-\u001f\u007f]/g, " "));
-    } else {
-      appendText(separator);
-    }
+    appendText(separator);
 
     const emoteName = cleanText(message.slice(range.start, range.end + 1), 50);
     const replacement = registryEntry
@@ -119,7 +120,7 @@ function formatMinecraftCommand(
   role: ChatRole | null = null,
   emotes?: ChatUserstate["emotes"],
   emoteMap: ReadonlyMap<string, EmoteRegistryEntry> = new Map()
-): string | null {
+): FormattedCommand | null {
   const safeUsername = cleanText(username, 25) || "unknown";
   const messageParts = formatEmotes(message, emotes, emoteMap);
   if (messageParts.length === 0) return null;
@@ -130,6 +131,7 @@ function formatMinecraftCommand(
   ];
   if (role) extra.push({ text: ` [${role}]`, color: ROLE_COLORS[role] });
   extra.push({ text: ` ${safeUsername}: ` });
+  const messageStart = extra.length;
   extra.push(...messageParts);
 
   const component = {
@@ -137,7 +139,32 @@ function formatMinecraftCommand(
     extra
   };
 
-  return `tellraw @a ${JSON.stringify(component)}`;
+  const serialize = (): string => `tellraw @a ${JSON.stringify(component)}`;
+  let command = serialize();
+  let truncated = false;
+
+  while (Buffer.byteLength(command, "utf8") > MAX_RCON_COMMAND_BYTES) {
+    if (!truncated) {
+      extra.push({ text: "…" });
+      truncated = true;
+    }
+
+    let lastTextPart = extra.length - 2;
+    while (lastTextPart >= messageStart && !extra[lastTextPart].text) lastTextPart--;
+    if (lastTextPart < messageStart) break;
+
+    const text = Array.from(extra[lastTextPart].text);
+    text.pop();
+    extra[lastTextPart].text = text.join("");
+    if (!extra[lastTextPart].text) extra.splice(lastTextPart, 1);
+    command = serialize();
+  }
+
+  if (truncated) {
+    console.warn(`Truncated Twitch message to fit the ${MAX_RCON_COMMAND_BYTES}-byte RCON command limit.`);
+  }
+
+  return { command, truncated };
 }
 
 export { formatMinecraftCommand, getChatRole };

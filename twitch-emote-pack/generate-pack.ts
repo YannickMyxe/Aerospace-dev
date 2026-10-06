@@ -157,11 +157,6 @@ async function main(): Promise<void> {
     type: "reference",
     id: "minecraft:default"
   });
-  fontProviders.unshift({
-    type: "space",
-    advances: { " ": 4 }
-  });
-
   const fontFile = join(packRoot, "assets", "twitch", "font", "emotes.json");
   await mkdir(dirname(fontFile), { recursive: true });
   await writeFile(fontFile, `${JSON.stringify({ providers: fontProviders }, null, 2)}\n`);

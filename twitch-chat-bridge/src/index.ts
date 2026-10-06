@@ -17,8 +17,8 @@ function runDryRun(): void {
       return;
     }
 
-    const command = formatMinecraftCommand(line.slice(0, separator), line.slice(separator + 1));
-    if (command) console.log(command);
+    const formatted = formatMinecraftCommand(line.slice(0, separator), line.slice(separator + 1));
+    if (formatted) console.log(formatted.command);
   });
 }
 
@@ -87,14 +87,14 @@ async function runBridge(): Promise<void> {
   client.on("message", (_channel, tags, message, self) => {
     if (self) return;
 
-    const command = formatMinecraftCommand(
+    const formatted = formatMinecraftCommand(
       tags["display-name"] || tags.username || "unknown",
       message,
       getChatRole(tags),
       tags.emotes,
       emotesById
     );
-    if (!command) return;
+    if (!formatted) return;
 
     const now = Date.now();
     while (sentAt.length && now - sentAt[0] >= 60_000) sentAt.shift();
@@ -107,7 +107,7 @@ async function runBridge(): Promise<void> {
     sendQueue = sendQueue.then(async () => {
       const waitMs = Math.max(0, lastSentAt + minIntervalMs - Date.now());
       if (waitMs) await new Promise((resolve) => setTimeout(resolve, waitMs));
-      await sendToMinecraft(command);
+      await sendToMinecraft(formatted.command);
       lastSentAt = Date.now();
     }).catch((error) => {
       console.error("Could not relay Twitch message to Minecraft:", errorMessage(error));
