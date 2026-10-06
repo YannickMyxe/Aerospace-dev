@@ -18,7 +18,7 @@ someviewer: Hello from Twitch!
 
 The app prints a `tellraw` command to the console but does not connect to Twitch or Minecraft. Press Ctrl+C to stop.
 
-You can run the formatter tests locally with `node --test`.
+The bridge is written in TypeScript and uses Bun for dependency management, tests, and runtime. You can run the formatter tests with `bun test` and check types with `bun run typecheck`.
 
 ## Connect Twitch and Minecraft
 
