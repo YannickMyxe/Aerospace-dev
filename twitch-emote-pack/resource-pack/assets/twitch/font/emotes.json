@@ -3,8 +3,8 @@
     {
       "type": "bitmap",
       "file": "twitch:emotes/25.png",
-      "height": 16,
-      "ascent": 12,
+      "height": 8,
+      "ascent": 7,
       "chars": [
         ""
       ]

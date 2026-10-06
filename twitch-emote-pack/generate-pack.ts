@@ -21,7 +21,7 @@ const root = import.meta.dir;
 const registryPath = join(root, "emote-map.json");
 const packRoot = join(root, "resource-pack");
 const width = 16;
-const height = 16;
+const height = 8;
 
 function crc32(data: Buffer): number {
   let crc = 0xffffffff;
@@ -149,7 +149,7 @@ async function main(): Promise<void> {
       type: "bitmap",
       file: texturePath,
       height,
-      ascent: 12,
+      ascent: 7,
       chars: [String.fromCodePoint(Number.parseInt(emote.codepoint, 16))]
     });
   }
