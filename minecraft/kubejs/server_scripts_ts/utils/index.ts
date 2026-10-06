@@ -23,6 +23,12 @@ type ShapedRecipeEventApi = {
     ): unknown;
 };
 
+type ShapelessRecipeApi = {
+    shapeless(output: string,
+              input: string[]
+    ): unknown;
+}
+
 export const multiple = (item: Item, amount: number): string => `${amount}x ${item}`;
 
 export const itemTag = (id: string): ItemTag => {
