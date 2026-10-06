@@ -1,0 +1,27 @@
+{
+  "PROPULSION": {
+    "x": 107,
+    "y": 252,
+    "width": 132,
+    "height": 57,
+    "userPlaced": true,
+    "visible": true
+  },
+  "FORCE_GIZMO": {
+    "x": 386,
+    "y": 241,
+    "width": 124,
+    "height": 62,
+    "userPlaced": true,
+    "visible": true
+  },
+  "DIAGRAM": {
+    "x": 471,
+    "y": 25,
+    "width": 160,
+    "height": 111,
+    "userPlaced": true,
+    "visible": true
+  },
+  "CUSTOM_HUD": {}
+}

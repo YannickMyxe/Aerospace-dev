@@ -1,0 +1,54 @@
+# PrismLauncher instance-specific settings
+/instance.cfg
+.idea/
+
+# Minecraft runtime data and downloaded content
+/minecraft/.cache/
+/minecraft/.mixin.out/
+/minecraft/.probe/
+/minecraft/.sable/
+/minecraft/.vscode/
+/minecraft/audio_providers/
+/minecraft/crash-reports/
+/minecraft/debug/
+/minecraft/downloads/
+/minecraft/dynamic-data-pack-cache/
+/minecraft/dynamic-resource-pack-cache/
+/minecraft/emilink/
+/minecraft/local/
+/minecraft/logs/
+/minecraft/mods/
+/minecraft/resourcepacks/
+/minecraft/saves/
+/minecraft/schematics/
+/minecraft/screenshots/
+/minecraft/server-resource-packs/
+/minecraft/shaderpacks/
+/minecraft/texturepacks/
+/minecraft/xaero/
+/minecraft/XaeroWaypoints_BACKUP*/
+
+# Local game settings and player/server state
+/minecraft/.qmenu_opened.marker
+/minecraft/command_history.txt
+/minecraft/emi.json
+/minecraft/options.txt
+/minecraft/patchouli_data.json
+/minecraft/ponders_watched*.json
+/minecraft/servers.dat*
+/minecraft/TrashSlotSaveState.json
+/minecraft/usercache.json
+/minecraft/usernamecache.json
+
+# Generated config data and backups
+/minecraft/config/ars_nouveau/search_index/
+/minecraft/config/CSC/Log/
+/minecraft/config/CSC/*.log
+*.bak
+
+# JavaScript/TypeScript dependencies and build artifacts
+node_modules/
+*.tsbuildinfo
+coverage/
+dist/
+out/

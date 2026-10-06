@@ -1,0 +1,49 @@
+#Market aggregation and price history
+[market]
+	#Ticks between price history snapshots (20 ticks = 1 second).
+	#Default 12000 = 10 minutes.
+	# Default: 12000
+	# Range: 200 ~ 1728000
+	snapshotIntervalTicks = 12000
+	#Snapshots kept per stock. At the default interval, 144 covers 24 hours.
+	# Default: 144
+	# Range: 2 ~ 4096
+	maxSnapshots = 144
+	#How many spurs the average price must move before the trend arrow
+	#changes from stable to rising/falling.
+	# Default: 1
+	# Range: 0 ~ 100000
+	trendThreshold = 1
+	#How many earlier snapshots are averaged into the trend baseline.
+	#Higher values make the arrow steadier and slower to react.
+	# Default: 3
+	# Range: 1 ~ 64
+	trendWindow = 3
+	#Combined sell+buy listings at which a row is highlighted as high activity.
+	# Default: 5
+	# Range: 1 ~ 10000
+	hotVolume = 5
+	#List item variants as separate stocks.
+	#true  — two differently enchanted books are two stocks with their own prices.
+	#false — every variant of an item collapses into one averaged row.
+	splitByComponents = true
+	#Discard price history for stocks nobody has traded for this many days.
+	#Set to 0 to keep history forever.
+	# Default: 7
+	# Range: 0 ~ 3650
+	historyRetentionDays = 7
+
+#Command access
+[commands]
+	#Vanilla permission level required to run /shoplist.
+	#0 = everyone. Raise it if shop coordinates should not be public.
+	# Default: 0
+	# Range: 0 ~ 4
+	shopListPermissionLevel = 0
+
+#Custom stock names
+[naming]
+	#Rename stocks on the market screen, one "<item id>=<name>" per entry.
+	#Example: ["minecraft:diamond=DIA", "create:brass_ingot=BRASS"]
+	#Applies to every variant of the item; leave empty to use item names.
+	stockNames = []

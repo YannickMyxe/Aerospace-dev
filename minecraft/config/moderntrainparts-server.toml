@@ -1,0 +1,44 @@
+#.
+#Configs for Modern Train Parts
+[server]
+	#.
+	#The total amount of stacks a container can hold per block in size.
+	# Default: 3
+	# Range: > 1
+	containerCapacity = 3
+
+	#.
+	#Bulkstorage Configs
+	[server.bulkstorage]
+		#.
+		#The total amount of stacks a bulk storage container can hold per block in size.
+		# Default: 2
+		# Range: > 1
+		bulkStorageCapacity = 2
+		#.
+		#If the bulkstorage should drop items when upside down
+		bulkStorageDrop = true
+		#.
+		#The angle where the bulkstorage starts dropping items when upside down
+		# Default: 45
+		# Range: 0 ~ 90
+		bulkStorageDropAngle = 45
+		#.
+		#The speed at which the bulkstorage should drop items per tick
+		# Default: 8
+		# Range: > 1
+		bulkStorageDropSpeed = 8
+
+	#.
+	#Wire Configs
+	[server.wire]
+		#.
+		#The maximal length a wire can go.
+		# Default: 16
+		# Range: > 1
+		wire_length = 16
+		#.
+		#The height at which wires should be placed above the train tracks
+		# Default: 5
+		# Range: > -2147483648
+		wire_track_placement_height = 5

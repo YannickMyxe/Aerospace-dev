@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "moduleDetection": "legacy",
+    "rootDir": ".",
+    "outDir": "../server_scripts/compiled",
+    "allowJs": false,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@package": ["../../.probe/@package"],
+      "@package/*": ["../../.probe/@package/*"],
+      "@side-only/server": ["../../.probe/@side-only/server"],
+      "@side-only/server/*": ["../../.probe/@side-only/server/*"],
+      "@special": ["../../.probe/@special"],
+      "@special/*": ["../../.probe/@special/*"]
+    },
+    "strict": false,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "include": [
+    "./**/*.ts",
+    "../../.probe/@side-only/server/**/*.d.ts",
+    "../../.probe/@special/**/*.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

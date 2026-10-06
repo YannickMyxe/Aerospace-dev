@@ -1,0 +1,54 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "MitzieMyxe",
+      "uniqueId": "be432ba6-f72d-4705-bfc6-1f2a4e7774ff"
+    },
+    "time": 1790865972951,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/33cl59lNTh"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "MitzieMyxe",
+      "uniqueId": "be432ba6-f72d-4705-bfc6-1f2a4e7774ff"
+    },
+    "time": 1790863333624,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/qkOYZfTeKp"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "MitzieMyxe",
+      "uniqueId": "be432ba6-f72d-4705-bfc6-1f2a4e7774ff"
+    },
+    "time": 1790860389361,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/euNBNKVtJw"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "MitzieMyxe",
+      "uniqueId": "be432ba6-f72d-4705-bfc6-1f2a4e7774ff"
+    },
+    "time": 1790860114649,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/uwvxFVhpcU"
+    }
+  }
+]

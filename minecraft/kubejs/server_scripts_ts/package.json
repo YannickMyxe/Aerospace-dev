@@ -1,0 +1,13 @@
+{
+  "name": "server_scripts_ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "check": "tsc --project tsconfig.json --noEmit",
+    "watch": "tsc --project tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  }
+}
