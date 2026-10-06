@@ -1,4 +1,5 @@
 import type { ChatUserstate } from "tmi.js";
+import type { EmoteRegistryEntry } from "./emote-map";
 
 const MAX_MESSAGE_LENGTH = 300;
 
@@ -17,31 +18,64 @@ function cleanText(value: string, maxLength: number): string {
   ).slice(0, maxLength).join("");
 }
 
-function formatEmotes(message: string, emotes: ChatUserstate["emotes"]): string {
-  const ranges = Object.values(emotes ?? {})
-    .flat()
-    .map((range) => {
-      const match = /^(\d+)-(\d+)$/.exec(range);
+function formatEmotes(
+  message: string,
+  twitchEmotes: ChatUserstate["emotes"],
+  emoteMap: ReadonlyMap<string, EmoteRegistryEntry>
+): Array<{ text: string; font?: string }> {
+  const ranges = Object.entries(twitchEmotes ?? {})
+    .flatMap(([id, positions]) => positions.map((position) => ({ id, position })))
+    .map(({ id, position }) => {
+      const match = /^(\d+)-(\d+)$/.exec(position);
       if (!match) return null;
 
       const start = Number(match[1]);
       const end = Number(match[2]);
       if (start > end || end >= message.length) return null;
-      return { start, end };
+      return { id, start, end };
     })
-    .filter((range): range is { start: number; end: number } => range !== null)
+    .filter((range): range is { id: string; start: number; end: number } => range !== null)
     .sort((left, right) => left.start - right.start);
 
-  let result = "";
+  const result: Array<{ text: string; font?: string }> = [];
   let cursor = 0;
+  let length = 0;
+  const appendText = (text: string): void => {
+    const remaining = MAX_MESSAGE_LENGTH - length;
+    if (remaining <= 0) return;
+    const normalized = text.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ");
+    const cleaned = Array.from(normalized).slice(0, remaining).join("");
+    if (!cleaned) return;
+    const previous = result[result.length - 1];
+    if (previous && !previous.font) previous.text += cleaned;
+    else result.push({ text: cleaned });
+    length += Array.from(cleaned).length;
+  };
+
   for (const range of ranges) {
     if (range.start < cursor) continue;
-    result += message.slice(cursor, range.start);
-    result += `[${message.slice(range.start, range.end + 1)}]`;
+    appendText(message.slice(cursor, range.start));
+    const registryEntry = emoteMap.get(range.id);
+    const emoteName = cleanText(message.slice(range.start, range.end + 1), 50);
+    const replacement = registryEntry
+      ? {
+          text: String.fromCodePoint(Number.parseInt(registryEntry.codepoint, 16)),
+          font: "twitch:emotes"
+        }
+      : { text: `[${emoteName}]` };
+    if (length < MAX_MESSAGE_LENGTH) {
+      result.push(replacement);
+      length += Array.from(replacement.text).length;
+    }
     cursor = range.end + 1;
   }
 
-  return result + message.slice(cursor);
+  appendText(message.slice(cursor));
+  if (result[0] && !result[0].font) result[0].text = result[0].text.trimStart();
+  if (result.at(-1) && !result.at(-1)!.font) result.at(-1)!.text = result.at(-1)!.text.trimEnd();
+  while (result[0] && !result[0].text) result.shift();
+  while (result.at(-1) && !result.at(-1)!.text) result.pop();
+  return result;
 }
 
 function getChatRole(userstate: ChatUserstate): ChatRole | null {
@@ -67,17 +101,24 @@ function formatMinecraftCommand(
   username: string,
   message: string,
   role: ChatRole | null = null,
-  emotes?: ChatUserstate["emotes"]
+  emotes?: ChatUserstate["emotes"],
+  emoteMap: ReadonlyMap<string, EmoteRegistryEntry> = new Map()
 ): string | null {
   const safeUsername = cleanText(username, 25) || "unknown";
-  const safeMessage = cleanText(formatEmotes(message, emotes), MAX_MESSAGE_LENGTH);
-  if (!safeMessage) return null;
+  const messageParts = formatEmotes(message, emotes, emoteMap);
+  if (messageParts.length === 0) return null;
 
   const extra: Array<{ text: string; color?: string }> = [
     { text: "[Twitch]", color: "dark_purple" }
   ];
   if (role) extra.push({ text: ` [${role}]`, color: ROLE_COLORS[role] });
-  extra.push({ text: ` ${safeUsername}: ${safeMessage}` });
+  extra.push({ text: ` ${safeUsername}:` });
+  if (messageParts[0] && !messageParts[0].font) {
+    messageParts[0].text = ` ${messageParts[0].text}`;
+  } else {
+    extra.push({ text: " " });
+  }
+  extra.push(...messageParts);
 
   const component = {
     text: "",

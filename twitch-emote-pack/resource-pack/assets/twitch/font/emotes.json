@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/25.png",
+      "height": 16,
+      "ascent": 12,
+      "chars": [
+        ""
+      ]
+    }
+  ]
+}

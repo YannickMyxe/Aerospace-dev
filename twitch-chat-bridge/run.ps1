@@ -16,7 +16,7 @@ if ($LASTEXITCODE -ne 0) {
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 }
 
-podman build -t twitch-chat-bridge .
+podman build -f Dockerfile -t twitch-chat-bridge ..
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 podman run --rm -i --network twitch-chat-local --env-file .env twitch-chat-bridge

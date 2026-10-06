@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "privateUseRange": {
+    "start": "E000",
+    "end": "F8FF"
+  },
+  "emotes": [
+    {
+      "id": "25",
+      "name": "Kappa",
+      "codepoint": "E000"
+    }
+  ]
+}

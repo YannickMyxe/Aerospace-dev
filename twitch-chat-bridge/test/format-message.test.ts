@@ -1,5 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import { formatMinecraftCommand, getChatRole } from "../src/format-message";
+import type { EmoteRegistryEntry } from "../src/emote-map";
+
+const emoteMap = new Map<string, EmoteRegistryEntry>([
+  ["25", { id: "25", name: "Kappa", codepoint: "E000" }]
+]);
 
 describe("formatMinecraftCommand", () => {
 test("formats chat as a safely encoded tellraw command", () => {
@@ -9,7 +14,8 @@ test("formats chat as a safely encoded tellraw command", () => {
 
   expect(component.extra).toEqual([
     { text: "[Twitch]", color: "dark_purple" },
-    { text: ' Streamer: hello "world"' }
+    { text: " Streamer:" },
+    { text: ' hello "world"' }
   ]);
 });
 
@@ -21,7 +27,8 @@ test("adds colored Twitch roles and uses the highest-priority role", () => {
   expect(component.extra).toEqual([
     { text: "[Twitch]", color: "dark_purple" },
     { text: " [BROADCASTER]", color: "gold" },
-    { text: " Streamer: hello" }
+    { text: " Streamer:" },
+    { text: " hello" }
   ]);
 });
 
@@ -45,11 +52,17 @@ test("wraps Twitch emotes using the provided message offsets", () => {
   const command = formatMinecraftCommand("viewer", message, null, {
     "25": ["6-10"],
     "305954156": ["16-23"]
-  });
+  }, emoteMap);
   expect(command).not.toBeNull();
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
-  expect(component.extra[1].text).toBe(" viewer: Hello [Kappa] and [PogChamp]!");
+  expect(component.extra.slice(1)).toEqual([
+    { text: " viewer:" },
+    { text: " Hello " },
+    { text: "\uE000", font: "twitch:emotes" },
+    { text: " and " },
+    { text: "[PogChamp]!" }
+  ]);
 });
 
 test("wraps UTF-16-indexed emotes after supplementary Unicode characters", () => {
@@ -57,21 +70,26 @@ test("wraps UTF-16-indexed emotes after supplementary Unicode characters", () =>
   const start = message.indexOf("Kappa");
   const command = formatMinecraftCommand("viewer", message, null, {
     "25": [`${start}-${start + "Kappa".length - 1}`]
-  });
+  }, emoteMap);
   expect(command).not.toBeNull();
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
-  expect(component.extra[1].text).toBe(" viewer: 🎉 [Kappa]");
+  expect(component.extra.slice(1)).toEqual([
+    { text: " viewer:" },
+    { text: " 🎉 " },
+    { text: "\uE000", font: "twitch:emotes" }
+  ]);
 });
 
 test("ignores malformed and out-of-range emote offsets", () => {
   const command = formatMinecraftCommand("viewer", "Kappa", null, {
     "25": ["bad-range", "0-10"]
-  });
+  }, emoteMap);
   expect(command).not.toBeNull();
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
-  expect(component.extra[1].text).toBe(" viewer: Kappa");
+  expect(component.extra[1].text).toBe(" viewer:");
+  expect(component.extra[2].text).toBe(" Kappa");
 });
 
 test("strips line breaks and control characters from chat input", () => {
@@ -80,7 +98,8 @@ test("strips line breaks and control characters from chat input", () => {
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
   expect(component.extra[0].text).toBe("[Twitch]");
-  expect(component.extra[1].text).toBe(" user: hello say hacked there");
+  expect(component.extra[1].text).toBe(" user:");
+  expect(component.extra[2].text).toBe(" hello say hacked there");
 });
 
 test("limits message and username lengths and ignores empty messages", () => {
@@ -89,7 +108,8 @@ test("limits message and username lengths and ignores empty messages", () => {
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
   expect(component.extra[0].text).toBe("[Twitch]");
-  expect(component.extra[1].text.length).toBe(1 + 25 + 2 + 300);
+  expect(component.extra[1].text).toBe(" uuuuuuuuuuuuuuuuuuuuuuuuu:");
+  expect(component.extra[2].text.length).toBe(301);
   expect(formatMinecraftCommand("user", " \n ")).toBeNull();
 });
 });

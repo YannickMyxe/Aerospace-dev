@@ -2,6 +2,7 @@ import readline from "node:readline";
 import { Rcon } from "rcon-client";
 import tmi from "tmi.js";
 import { formatMinecraftCommand, getChatRole } from "./format-message";
+import { emotesById } from "./emote-map";
 
 const dryRun = (process.env.DRY_RUN ?? "true").toLowerCase() === "true";
 
@@ -63,7 +64,8 @@ async function runBridge(): Promise<void> {
       tags["display-name"] || tags.username || "unknown",
       message,
       getChatRole(tags),
-      tags.emotes
+      tags.emotes,
+      emotesById
     );
     if (!command) return;
 
