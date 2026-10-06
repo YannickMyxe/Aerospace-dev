@@ -153,6 +153,14 @@ async function main(): Promise<void> {
       chars: [String.fromCodePoint(Number.parseInt(emote.codepoint, 16))]
     });
   }
+  fontProviders.push({
+    type: "reference",
+    id: "minecraft:default"
+  });
+  fontProviders.unshift({
+    type: "space",
+    advances: { " ": 4 }
+  });
 
   const fontFile = join(packRoot, "assets", "twitch", "font", "emotes.json");
   await mkdir(dirname(fontFile), { recursive: true });

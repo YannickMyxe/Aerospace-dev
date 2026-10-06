@@ -44,7 +44,34 @@ async function runBridge(): Promise<void> {
     throw new Error("RCON_PORT must be an integer between 1 and 65535");
   }
 
-  const rcon = await Rcon.connect({ host, port, password });
+  let rcon: Rcon | undefined;
+  const connectRcon = async (): Promise<Rcon> => {
+    const connection = await Rcon.connect({ host, port, password });
+    connection.on("error", (error) => {
+      console.error("Minecraft RCON socket error:", errorMessage(error));
+    });
+    rcon = connection;
+    console.log("Connected to Minecraft RCON");
+    return connection;
+  };
+  await connectRcon();
+
+  const sendToMinecraft = async (command: string): Promise<void> => {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const connected = rcon?.authenticated && rcon.socket?.writable && !rcon.socket.destroyed;
+      if (!connected) await connectRcon();
+
+      try {
+        await rcon!.send(command);
+        return;
+      } catch (error) {
+        rcon = undefined;
+        if (attempt === 1) throw error;
+        console.warn("Minecraft RCON connection was lost; reconnecting and retrying once.");
+      }
+    }
+  };
+
   const client = new tmi.Client({
     options: { debug: false },
     connection: { reconnect: true, secure: true },
@@ -80,7 +107,7 @@ async function runBridge(): Promise<void> {
     sendQueue = sendQueue.then(async () => {
       const waitMs = Math.max(0, lastSentAt + minIntervalMs - Date.now());
       if (waitMs) await new Promise((resolve) => setTimeout(resolve, waitMs));
-      await rcon.send(command);
+      await sendToMinecraft(command);
       lastSentAt = Date.now();
     }).catch((error) => {
       console.error("Could not relay Twitch message to Minecraft:", errorMessage(error));
@@ -100,7 +127,9 @@ async function runBridge(): Promise<void> {
       console.error("Could not disconnect from Twitch chat:", errorMessage(error));
     }
     try {
-      await rcon.end();
+      if (rcon?.authenticated && rcon.socket?.writable && !rcon.socket.destroyed) {
+        await rcon.end();
+      }
     } catch (error) {
       console.error("Could not close RCON connection:", errorMessage(error));
     }

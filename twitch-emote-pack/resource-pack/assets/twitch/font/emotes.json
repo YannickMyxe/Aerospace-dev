@@ -1,6 +1,12 @@
 {
   "providers": [
     {
+      "type": "space",
+      "advances": {
+        " ": 4
+      }
+    },
+    {
       "type": "bitmap",
       "file": "twitch:emotes/25.png",
       "height": 8,
@@ -8,6 +14,2422 @@
       "chars": [
         ""
       ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827377.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827370.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827356.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827340.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827332.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827326.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827321.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827313.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/307827267.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/305954156.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/304489309.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/304489128.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/304486324.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/304486301.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/302628617.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/302628613.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/302628600.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/302537250.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/302426269.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/301696583.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555600.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555599.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555598.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555597.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555596.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555595.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555594.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555593.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555592.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555591.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555590.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555589.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555588.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555587.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555586.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555585.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555584.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555583.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555582.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555581.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555580.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555579.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555578.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555577.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555576.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555575.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555574.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555573.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555572.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555571.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555570.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555569.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555568.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555567.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555566.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555565.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555564.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555563.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555562.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555561.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555560.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555559.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555558.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/555555557.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/301428702.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/300116350.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/300116349.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/300116344.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/2113050.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1713825.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1713822.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1713819.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1713816.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1713813.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1547903.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441289.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441285.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441281.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441276.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441273.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441271.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1441261.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1290325.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1220086.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1003190.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1003189.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1003187.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/965738.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/959018.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/864205.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/724216.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/626795.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/508650.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/479745.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/461298.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/446979.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/444572.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/425688.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/425671.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/425618.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/376765.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/323914.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/196892.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/191767.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/191764.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/191763.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/191762.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/191313.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/166266.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/166263.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160404.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160403.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160402.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160401.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160400.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160397.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160396.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160395.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160394.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/160392.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/156787.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/145315.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/143490.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/142140.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/138325.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/135393.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/134256.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/134255.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/134254.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/133537.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/133468.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/123171.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/120232.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/118772.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/117701.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/117484.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/116625.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/115234.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/115233.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/115075.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114876.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114870.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114856.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114847.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114846.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114836.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114835.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/114738.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/112292.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/112291.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/112290.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/112289.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/112288.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/111792.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/111700.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/111351.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/111300.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/111119.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/110734.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/107030.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/106294.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/106293.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/102556.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/102242.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/100590.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/98562.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/90129.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/90076.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/90075.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/89945.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/84608.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81997.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81636.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81274.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81273.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81249.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81248.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/81103.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/74510.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/70433.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/68856.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/64138.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/62836.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/62835.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/62834.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/62833.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/58765.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/58135.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/58127.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/55338.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/52492.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/51838.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/49106.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/38586.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/38436.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/35063.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/34875.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/30259.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/30134.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/28328.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/28087.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/27602.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/27509.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/22998.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/22639.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/20225.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/7427.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/4338.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/4337.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/4240.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/4057.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/3792.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/3668.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/3632.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/3412.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1906.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1904.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1902.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1901.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1900.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1899.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1898.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1896.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/973.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/360.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/357.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/354.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/245.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/244.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/92.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/87.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/74.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/73.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/69.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/66.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/65.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/52.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/50.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/47.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/46.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/41.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/40.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/36.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/34.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/33.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/32.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/30.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/28.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/26.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/22.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/18.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/17.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/16.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/15.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/14.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/13.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/12.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/11.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/10.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/9.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/8.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/7.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/6.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/5.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/4.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/3.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/2.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "twitch:emotes/1.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "reference",
+      "id": "minecraft:default"
     }
   ]
 }

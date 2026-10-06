@@ -9,6 +9,1346 @@
       "id": "25",
       "name": "Kappa",
       "codepoint": "E000"
+    },
+    {
+      "id": "307827377",
+      "name": "TransgenderPride",
+      "codepoint": "E001"
+    },
+    {
+      "id": "307827370",
+      "name": "PansexualPride",
+      "codepoint": "E002"
+    },
+    {
+      "id": "307827356",
+      "name": "NonbinaryPride",
+      "codepoint": "E003"
+    },
+    {
+      "id": "307827340",
+      "name": "LesbianPride",
+      "codepoint": "E004"
+    },
+    {
+      "id": "307827332",
+      "name": "IntersexPride",
+      "codepoint": "E005"
+    },
+    {
+      "id": "307827326",
+      "name": "GenderFluidPride",
+      "codepoint": "E006"
+    },
+    {
+      "id": "307827321",
+      "name": "GayPride",
+      "codepoint": "E007"
+    },
+    {
+      "id": "307827313",
+      "name": "BisexualPride",
+      "codepoint": "E008"
+    },
+    {
+      "id": "307827267",
+      "name": "AsexualPride",
+      "codepoint": "E009"
+    },
+    {
+      "id": "305954156",
+      "name": "PogChamp",
+      "codepoint": "E00A"
+    },
+    {
+      "id": "304489309",
+      "name": "GlitchNRG",
+      "codepoint": "E00B"
+    },
+    {
+      "id": "304489128",
+      "name": "GlitchLit",
+      "codepoint": "E00C"
+    },
+    {
+      "id": "304486324",
+      "name": "StinkyGlitch",
+      "codepoint": "E00D"
+    },
+    {
+      "id": "304486301",
+      "name": "GlitchCat",
+      "codepoint": "E00E"
+    },
+    {
+      "id": "302628617",
+      "name": "FootGoal",
+      "codepoint": "E00F"
+    },
+    {
+      "id": "302628613",
+      "name": "FootYellow",
+      "codepoint": "E010"
+    },
+    {
+      "id": "302628600",
+      "name": "FootBall",
+      "codepoint": "E011"
+    },
+    {
+      "id": "302537250",
+      "name": "BlackLivesMatter",
+      "codepoint": "E012"
+    },
+    {
+      "id": "302426269",
+      "name": "ExtraLife",
+      "codepoint": "E013"
+    },
+    {
+      "id": "301696583",
+      "name": "VirtualHug",
+      "codepoint": "E014"
+    },
+    {
+      "id": "555555600",
+      "name": "R-)",
+      "codepoint": "E015"
+    },
+    {
+      "id": "555555599",
+      "name": "R)",
+      "codepoint": "E016"
+    },
+    {
+      "id": "555555598",
+      "name": ";-p",
+      "codepoint": "E017"
+    },
+    {
+      "id": "555555597",
+      "name": ";p",
+      "codepoint": "E018"
+    },
+    {
+      "id": "555555596",
+      "name": ";-P",
+      "codepoint": "E019"
+    },
+    {
+      "id": "555555595",
+      "name": ";P",
+      "codepoint": "E01A"
+    },
+    {
+      "id": "555555594",
+      "name": ":-p",
+      "codepoint": "E01B"
+    },
+    {
+      "id": "555555593",
+      "name": ":p",
+      "codepoint": "E01C"
+    },
+    {
+      "id": "555555592",
+      "name": ":-P",
+      "codepoint": "E01D"
+    },
+    {
+      "id": "555555591",
+      "name": ":P",
+      "codepoint": "E01E"
+    },
+    {
+      "id": "555555590",
+      "name": ";-)",
+      "codepoint": "E01F"
+    },
+    {
+      "id": "555555589",
+      "name": ";)",
+      "codepoint": "E020"
+    },
+    {
+      "id": "555555588",
+      "name": ":-\\",
+      "codepoint": "E021"
+    },
+    {
+      "id": "555555587",
+      "name": ":\\",
+      "codepoint": "E022"
+    },
+    {
+      "id": "555555586",
+      "name": ":-/",
+      "codepoint": "E023"
+    },
+    {
+      "id": "555555585",
+      "name": ":/",
+      "codepoint": "E024"
+    },
+    {
+      "id": "555555584",
+      "name": "<3",
+      "codepoint": "E025"
+    },
+    {
+      "id": "555555583",
+      "name": ":-o",
+      "codepoint": "E026"
+    },
+    {
+      "id": "555555582",
+      "name": ":o",
+      "codepoint": "E027"
+    },
+    {
+      "id": "555555581",
+      "name": ":-O",
+      "codepoint": "E028"
+    },
+    {
+      "id": "555555580",
+      "name": ":O",
+      "codepoint": "E029"
+    },
+    {
+      "id": "555555579",
+      "name": "8-)",
+      "codepoint": "E02A"
+    },
+    {
+      "id": "555555578",
+      "name": "B-)",
+      "codepoint": "E02B"
+    },
+    {
+      "id": "555555577",
+      "name": "B)",
+      "codepoint": "E02C"
+    },
+    {
+      "id": "555555576",
+      "name": "o.o",
+      "codepoint": "E02D"
+    },
+    {
+      "id": "555555575",
+      "name": "o_o",
+      "codepoint": "E02E"
+    },
+    {
+      "id": "555555574",
+      "name": "o.O",
+      "codepoint": "E02F"
+    },
+    {
+      "id": "555555573",
+      "name": "o_O",
+      "codepoint": "E030"
+    },
+    {
+      "id": "555555572",
+      "name": "O.O",
+      "codepoint": "E031"
+    },
+    {
+      "id": "555555571",
+      "name": "O_O",
+      "codepoint": "E032"
+    },
+    {
+      "id": "555555570",
+      "name": "O.o",
+      "codepoint": "E033"
+    },
+    {
+      "id": "555555569",
+      "name": "O_o",
+      "codepoint": "E034"
+    },
+    {
+      "id": "555555568",
+      "name": ":-Z",
+      "codepoint": "E035"
+    },
+    {
+      "id": "555555567",
+      "name": ":Z",
+      "codepoint": "E036"
+    },
+    {
+      "id": "555555566",
+      "name": ":-z",
+      "codepoint": "E037"
+    },
+    {
+      "id": "555555565",
+      "name": ":z",
+      "codepoint": "E038"
+    },
+    {
+      "id": "555555564",
+      "name": ":-|",
+      "codepoint": "E039"
+    },
+    {
+      "id": "555555563",
+      "name": ":|",
+      "codepoint": "E03A"
+    },
+    {
+      "id": "555555562",
+      "name": ">(",
+      "codepoint": "E03B"
+    },
+    {
+      "id": "555555561",
+      "name": ":-D",
+      "codepoint": "E03C"
+    },
+    {
+      "id": "555555560",
+      "name": ":D",
+      "codepoint": "E03D"
+    },
+    {
+      "id": "555555559",
+      "name": ":-(",
+      "codepoint": "E03E"
+    },
+    {
+      "id": "555555558",
+      "name": ":(",
+      "codepoint": "E03F"
+    },
+    {
+      "id": "555555557",
+      "name": ":-)",
+      "codepoint": "E040"
+    },
+    {
+      "id": "301428702",
+      "name": "BOP",
+      "codepoint": "E041"
+    },
+    {
+      "id": "300116350",
+      "name": "SingsNote",
+      "codepoint": "E042"
+    },
+    {
+      "id": "300116349",
+      "name": "SingsMic",
+      "codepoint": "E043"
+    },
+    {
+      "id": "300116344",
+      "name": "TwitchSings",
+      "codepoint": "E044"
+    },
+    {
+      "id": "2113050",
+      "name": "SoonerLater",
+      "codepoint": "E045"
+    },
+    {
+      "id": "1713825",
+      "name": "HolidayTree",
+      "codepoint": "E046"
+    },
+    {
+      "id": "1713822",
+      "name": "HolidaySanta",
+      "codepoint": "E047"
+    },
+    {
+      "id": "1713819",
+      "name": "HolidayPresent",
+      "codepoint": "E048"
+    },
+    {
+      "id": "1713816",
+      "name": "HolidayLog",
+      "codepoint": "E049"
+    },
+    {
+      "id": "1713813",
+      "name": "HolidayCookie",
+      "codepoint": "E04A"
+    },
+    {
+      "id": "1547903",
+      "name": "PixelBob",
+      "codepoint": "E04B"
+    },
+    {
+      "id": "1441289",
+      "name": "FBPenalty",
+      "codepoint": "E04C"
+    },
+    {
+      "id": "1441285",
+      "name": "FBChallenge",
+      "codepoint": "E04D"
+    },
+    {
+      "id": "1441281",
+      "name": "FBCatch",
+      "codepoint": "E04E"
+    },
+    {
+      "id": "1441276",
+      "name": "FBBlock",
+      "codepoint": "E04F"
+    },
+    {
+      "id": "1441273",
+      "name": "FBSpiral",
+      "codepoint": "E050"
+    },
+    {
+      "id": "1441271",
+      "name": "FBPass",
+      "codepoint": "E051"
+    },
+    {
+      "id": "1441261",
+      "name": "FBRun",
+      "codepoint": "E052"
+    },
+    {
+      "id": "1290325",
+      "name": "MaxLOL",
+      "codepoint": "E053"
+    },
+    {
+      "id": "1220086",
+      "name": "TwitchRPG",
+      "codepoint": "E054"
+    },
+    {
+      "id": "1003190",
+      "name": "PinkMercy",
+      "codepoint": "E055"
+    },
+    {
+      "id": "1003189",
+      "name": "MercyWing2",
+      "codepoint": "E056"
+    },
+    {
+      "id": "1003187",
+      "name": "MercyWing1",
+      "codepoint": "E057"
+    },
+    {
+      "id": "965738",
+      "name": "PartyHat",
+      "codepoint": "E058"
+    },
+    {
+      "id": "959018",
+      "name": "EarthDay",
+      "codepoint": "E059"
+    },
+    {
+      "id": "864205",
+      "name": "TombRaid",
+      "codepoint": "E05A"
+    },
+    {
+      "id": "724216",
+      "name": "PopCorn",
+      "codepoint": "E05B"
+    },
+    {
+      "id": "626795",
+      "name": "FBtouchdown",
+      "codepoint": "E05C"
+    },
+    {
+      "id": "508650",
+      "name": "TPFufun",
+      "codepoint": "E05D"
+    },
+    {
+      "id": "479745",
+      "name": "TwitchVotes",
+      "codepoint": "E05E"
+    },
+    {
+      "id": "461298",
+      "name": "DarkMode",
+      "codepoint": "E05F"
+    },
+    {
+      "id": "446979",
+      "name": "HSWP",
+      "codepoint": "E060"
+    },
+    {
+      "id": "444572",
+      "name": "HSCheers",
+      "codepoint": "E061"
+    },
+    {
+      "id": "425688",
+      "name": "PowerUpL",
+      "codepoint": "E062"
+    },
+    {
+      "id": "425671",
+      "name": "PowerUpR",
+      "codepoint": "E063"
+    },
+    {
+      "id": "425618",
+      "name": "LUL",
+      "codepoint": "E064"
+    },
+    {
+      "id": "376765",
+      "name": "EntropyWins",
+      "codepoint": "E065"
+    },
+    {
+      "id": "323914",
+      "name": "TPcrunchyroll",
+      "codepoint": "E066"
+    },
+    {
+      "id": "196892",
+      "name": "TwitchUnity",
+      "codepoint": "E067"
+    },
+    {
+      "id": "191767",
+      "name": "Squid4",
+      "codepoint": "E068"
+    },
+    {
+      "id": "191764",
+      "name": "Squid3",
+      "codepoint": "E069"
+    },
+    {
+      "id": "191763",
+      "name": "Squid2",
+      "codepoint": "E06A"
+    },
+    {
+      "id": "191762",
+      "name": "Squid1",
+      "codepoint": "E06B"
+    },
+    {
+      "id": "191313",
+      "name": "CrreamAwk",
+      "codepoint": "E06C"
+    },
+    {
+      "id": "166266",
+      "name": "CarlSmile",
+      "codepoint": "E06D"
+    },
+    {
+      "id": "166263",
+      "name": "TwitchLit",
+      "codepoint": "E06E"
+    },
+    {
+      "id": "160404",
+      "name": "TehePelo",
+      "codepoint": "E06F"
+    },
+    {
+      "id": "160403",
+      "name": "TearGlove",
+      "codepoint": "E070"
+    },
+    {
+      "id": "160402",
+      "name": "SabaPing",
+      "codepoint": "E071"
+    },
+    {
+      "id": "160401",
+      "name": "PunOko",
+      "codepoint": "E072"
+    },
+    {
+      "id": "160400",
+      "name": "KonCha",
+      "codepoint": "E073"
+    },
+    {
+      "id": "160397",
+      "name": "Kappu",
+      "codepoint": "E074"
+    },
+    {
+      "id": "160396",
+      "name": "InuyoFace",
+      "codepoint": "E075"
+    },
+    {
+      "id": "160395",
+      "name": "BigPhish",
+      "codepoint": "E076"
+    },
+    {
+      "id": "160394",
+      "name": "BegWan",
+      "codepoint": "E077"
+    },
+    {
+      "id": "160392",
+      "name": "ThankEgg",
+      "codepoint": "E078"
+    },
+    {
+      "id": "156787",
+      "name": "MorphinTime",
+      "codepoint": "E079"
+    },
+    {
+      "id": "145315",
+      "name": "TheIlluminati",
+      "codepoint": "E07A"
+    },
+    {
+      "id": "143490",
+      "name": "TBAngel",
+      "codepoint": "E07B"
+    },
+    {
+      "id": "142140",
+      "name": "MVGame",
+      "codepoint": "E07C"
+    },
+    {
+      "id": "138325",
+      "name": "NinjaGrumpy",
+      "codepoint": "E07D"
+    },
+    {
+      "id": "135393",
+      "name": "PartyTime",
+      "codepoint": "E07E"
+    },
+    {
+      "id": "134256",
+      "name": "RlyTho",
+      "codepoint": "E07F"
+    },
+    {
+      "id": "134255",
+      "name": "UWot",
+      "codepoint": "E080"
+    },
+    {
+      "id": "134254",
+      "name": "YouDontSay",
+      "codepoint": "E081"
+    },
+    {
+      "id": "133537",
+      "name": "KAPOW",
+      "codepoint": "E082"
+    },
+    {
+      "id": "133468",
+      "name": "ItsBoshyTime",
+      "codepoint": "E083"
+    },
+    {
+      "id": "123171",
+      "name": "CoolStoryBob",
+      "codepoint": "E084"
+    },
+    {
+      "id": "120232",
+      "name": "TriHard",
+      "codepoint": "E085"
+    },
+    {
+      "id": "118772",
+      "name": "SuperVinlin",
+      "codepoint": "E086"
+    },
+    {
+      "id": "117701",
+      "name": "FreakinStinkin",
+      "codepoint": "E087"
+    },
+    {
+      "id": "117484",
+      "name": "Poooound",
+      "codepoint": "E088"
+    },
+    {
+      "id": "116625",
+      "name": "CurseLit",
+      "codepoint": "E089"
+    },
+    {
+      "id": "115234",
+      "name": "BatChest",
+      "codepoint": "E08A"
+    },
+    {
+      "id": "115233",
+      "name": "BrainSlug",
+      "codepoint": "E08B"
+    },
+    {
+      "id": "115075",
+      "name": "PrimeMe",
+      "codepoint": "E08C"
+    },
+    {
+      "id": "114876",
+      "name": "StrawBeary",
+      "codepoint": "E08D"
+    },
+    {
+      "id": "114870",
+      "name": "RaccAttack",
+      "codepoint": "E08E"
+    },
+    {
+      "id": "114856",
+      "name": "UncleNox",
+      "codepoint": "E08F"
+    },
+    {
+      "id": "114847",
+      "name": "WTRuck",
+      "codepoint": "E090"
+    },
+    {
+      "id": "114846",
+      "name": "TooSpicy",
+      "codepoint": "E091"
+    },
+    {
+      "id": "114836",
+      "name": "Jebaited",
+      "codepoint": "E092"
+    },
+    {
+      "id": "114835",
+      "name": "DogFace",
+      "codepoint": "E093"
+    },
+    {
+      "id": "114738",
+      "name": "BlargNaut",
+      "codepoint": "E094"
+    },
+    {
+      "id": "112292",
+      "name": "TakeNRG",
+      "codepoint": "E095"
+    },
+    {
+      "id": "112291",
+      "name": "GivePLZ",
+      "codepoint": "E096"
+    },
+    {
+      "id": "112290",
+      "name": "imGlitch",
+      "codepoint": "E097"
+    },
+    {
+      "id": "112289",
+      "name": "pastaThat",
+      "codepoint": "E098"
+    },
+    {
+      "id": "112288",
+      "name": "copyThis",
+      "codepoint": "E099"
+    },
+    {
+      "id": "111792",
+      "name": "UnSane",
+      "codepoint": "E09A"
+    },
+    {
+      "id": "111700",
+      "name": "DatSheffy",
+      "codepoint": "E09B"
+    },
+    {
+      "id": "111351",
+      "name": "TheTarFu",
+      "codepoint": "E09C"
+    },
+    {
+      "id": "111300",
+      "name": "PicoMause",
+      "codepoint": "E09D"
+    },
+    {
+      "id": "111119",
+      "name": "TinyFace",
+      "codepoint": "E09E"
+    },
+    {
+      "id": "110734",
+      "name": "DxCat",
+      "codepoint": "E09F"
+    },
+    {
+      "id": "107030",
+      "name": "RuleFive",
+      "codepoint": "E0A0"
+    },
+    {
+      "id": "106294",
+      "name": "VoteNay",
+      "codepoint": "E0A1"
+    },
+    {
+      "id": "106293",
+      "name": "VoteYea",
+      "codepoint": "E0A2"
+    },
+    {
+      "id": "102556",
+      "name": "PJSugar",
+      "codepoint": "E0A3"
+    },
+    {
+      "id": "102242",
+      "name": "DoritosChip",
+      "codepoint": "E0A4"
+    },
+    {
+      "id": "100590",
+      "name": "OpieOP",
+      "codepoint": "E0A5"
+    },
+    {
+      "id": "98562",
+      "name": "FutureMan",
+      "codepoint": "E0A6"
+    },
+    {
+      "id": "90129",
+      "name": "ChefFrank",
+      "codepoint": "E0A7"
+    },
+    {
+      "id": "90076",
+      "name": "StinkyCheese",
+      "codepoint": "E0A8"
+    },
+    {
+      "id": "90075",
+      "name": "NomNom",
+      "codepoint": "E0A9"
+    },
+    {
+      "id": "89945",
+      "name": "SmoocherZ",
+      "codepoint": "E0AA"
+    },
+    {
+      "id": "84608",
+      "name": "cmonBruh",
+      "codepoint": "E0AB"
+    },
+    {
+      "id": "81997",
+      "name": "KappaWealth",
+      "codepoint": "E0AC"
+    },
+    {
+      "id": "81636",
+      "name": "MikeHogu",
+      "codepoint": "E0AD"
+    },
+    {
+      "id": "81274",
+      "name": "VoHiYo",
+      "codepoint": "E0AE"
+    },
+    {
+      "id": "81273",
+      "name": "KomodoHype",
+      "codepoint": "E0AF"
+    },
+    {
+      "id": "81249",
+      "name": "SeriousSloth",
+      "codepoint": "E0B0"
+    },
+    {
+      "id": "81248",
+      "name": "OSFrog",
+      "codepoint": "E0B1"
+    },
+    {
+      "id": "81103",
+      "name": "OhMyDog",
+      "codepoint": "E0B2"
+    },
+    {
+      "id": "74510",
+      "name": "KappaClaus",
+      "codepoint": "E0B3"
+    },
+    {
+      "id": "70433",
+      "name": "KappaRoss",
+      "codepoint": "E0B4"
+    },
+    {
+      "id": "68856",
+      "name": "MingLee",
+      "codepoint": "E0B5"
+    },
+    {
+      "id": "64138",
+      "name": "SeemsGood",
+      "codepoint": "E0B6"
+    },
+    {
+      "id": "62836",
+      "name": "twitchRaid",
+      "codepoint": "E0B7"
+    },
+    {
+      "id": "62835",
+      "name": "bleedPurple",
+      "codepoint": "E0B8"
+    },
+    {
+      "id": "62834",
+      "name": "duDudu",
+      "codepoint": "E0B9"
+    },
+    {
+      "id": "62833",
+      "name": "riPepperonis",
+      "codepoint": "E0BA"
+    },
+    {
+      "id": "58765",
+      "name": "NotLikeThis",
+      "codepoint": "E0BB"
+    },
+    {
+      "id": "58135",
+      "name": "DendiFace",
+      "codepoint": "E0BC"
+    },
+    {
+      "id": "58127",
+      "name": "CoolCat",
+      "codepoint": "E0BD"
+    },
+    {
+      "id": "55338",
+      "name": "KappaPride",
+      "codepoint": "E0BE"
+    },
+    {
+      "id": "52492",
+      "name": "ShadyLulu",
+      "codepoint": "E0BF"
+    },
+    {
+      "id": "51838",
+      "name": "ArgieB8",
+      "codepoint": "E0C0"
+    },
+    {
+      "id": "49106",
+      "name": "CorgiDerp",
+      "codepoint": "E0C1"
+    },
+    {
+      "id": "38586",
+      "name": "PraiseIt",
+      "codepoint": "E0C2"
+    },
+    {
+      "id": "38436",
+      "name": "TTours",
+      "codepoint": "E0C3"
+    },
+    {
+      "id": "35063",
+      "name": "mcaT",
+      "codepoint": "E0C4"
+    },
+    {
+      "id": "34875",
+      "name": "NotATK",
+      "codepoint": "E0C5"
+    },
+    {
+      "id": "30259",
+      "name": "HeyGuys",
+      "codepoint": "E0C6"
+    },
+    {
+      "id": "30134",
+      "name": "Mau5",
+      "codepoint": "E0C7"
+    },
+    {
+      "id": "28328",
+      "name": "PRChase",
+      "codepoint": "E0C8"
+    },
+    {
+      "id": "28087",
+      "name": "WutFace",
+      "codepoint": "E0C9"
+    },
+    {
+      "id": "27602",
+      "name": "BuddhaBar",
+      "codepoint": "E0CA"
+    },
+    {
+      "id": "27509",
+      "name": "PermaSmug",
+      "codepoint": "E0CB"
+    },
+    {
+      "id": "22998",
+      "name": "panicBasket",
+      "codepoint": "E0CC"
+    },
+    {
+      "id": "22639",
+      "name": "BabyRage",
+      "codepoint": "E0CD"
+    },
+    {
+      "id": "20225",
+      "name": "HassaanChop",
+      "codepoint": "E0CE"
+    },
+    {
+      "id": "7427",
+      "name": "TheThing",
+      "codepoint": "E0CF"
+    },
+    {
+      "id": "4338",
+      "name": "RitzMitz",
+      "codepoint": "E0D0"
+    },
+    {
+      "id": "4337",
+      "name": "YouWHY",
+      "codepoint": "E0D1"
+    },
+    {
+      "id": "4240",
+      "name": "PipeHype",
+      "codepoint": "E0D2"
+    },
+    {
+      "id": "4057",
+      "name": "BrokeBack",
+      "codepoint": "E0D3"
+    },
+    {
+      "id": "3792",
+      "name": "ANELE",
+      "codepoint": "E0D4"
+    },
+    {
+      "id": "3668",
+      "name": "PanicVis",
+      "codepoint": "E0D5"
+    },
+    {
+      "id": "3632",
+      "name": "GrammarKing",
+      "codepoint": "E0D6"
+    },
+    {
+      "id": "3412",
+      "name": "PeoplesChamp",
+      "codepoint": "E0D7"
+    },
+    {
+      "id": "1906",
+      "name": "SoBayed",
+      "codepoint": "E0D8"
+    },
+    {
+      "id": "1904",
+      "name": "BigBrother",
+      "codepoint": "E0D9"
+    },
+    {
+      "id": "1902",
+      "name": "Keepo",
+      "codepoint": "E0DA"
+    },
+    {
+      "id": "1901",
+      "name": "Kippa",
+      "codepoint": "E0DB"
+    },
+    {
+      "id": "1900",
+      "name": "RalpherZ",
+      "codepoint": "E0DC"
+    },
+    {
+      "id": "1899",
+      "name": "TF2John",
+      "codepoint": "E0DD"
+    },
+    {
+      "id": "1898",
+      "name": "ThunBeast",
+      "codepoint": "E0DE"
+    },
+    {
+      "id": "1896",
+      "name": "WholeWheat",
+      "codepoint": "E0DF"
+    },
+    {
+      "id": "973",
+      "name": "DAESuppy",
+      "codepoint": "E0E0"
+    },
+    {
+      "id": "360",
+      "name": "FailFish",
+      "codepoint": "E0E1"
+    },
+    {
+      "id": "357",
+      "name": "HotPokket",
+      "codepoint": "E0E2"
+    },
+    {
+      "id": "354",
+      "name": "4Head",
+      "codepoint": "E0E3"
+    },
+    {
+      "id": "245",
+      "name": "ResidentSleeper",
+      "codepoint": "E0E4"
+    },
+    {
+      "id": "244",
+      "name": "FUNgineer",
+      "codepoint": "E0E5"
+    },
+    {
+      "id": "92",
+      "name": "PMSTwin",
+      "codepoint": "E0E6"
+    },
+    {
+      "id": "87",
+      "name": "ShazBotstix",
+      "codepoint": "E0E7"
+    },
+    {
+      "id": "74",
+      "name": "AsianGlow",
+      "codepoint": "E0E8"
+    },
+    {
+      "id": "73",
+      "name": "DBstyle",
+      "codepoint": "E0E9"
+    },
+    {
+      "id": "69",
+      "name": "BloodTrail",
+      "codepoint": "E0EA"
+    },
+    {
+      "id": "66",
+      "name": "OneHand",
+      "codepoint": "E0EB"
+    },
+    {
+      "id": "65",
+      "name": "FrankerZ",
+      "codepoint": "E0EC"
+    },
+    {
+      "id": "52",
+      "name": "SMOrc",
+      "codepoint": "E0ED"
+    },
+    {
+      "id": "50",
+      "name": "ArsonNoSexy",
+      "codepoint": "E0EE"
+    },
+    {
+      "id": "47",
+      "name": "PunchTrees",
+      "codepoint": "E0EF"
+    },
+    {
+      "id": "46",
+      "name": "SSSsss",
+      "codepoint": "E0F0"
+    },
+    {
+      "id": "41",
+      "name": "Kreygasm",
+      "codepoint": "E0F1"
+    },
+    {
+      "id": "40",
+      "name": "KevinTurtle",
+      "codepoint": "E0F2"
+    },
+    {
+      "id": "36",
+      "name": "PJSalt",
+      "codepoint": "E0F3"
+    },
+    {
+      "id": "34",
+      "name": "SwiftRage",
+      "codepoint": "E0F4"
+    },
+    {
+      "id": "33",
+      "name": "DansGame",
+      "codepoint": "E0F5"
+    },
+    {
+      "id": "32",
+      "name": "GingerPower",
+      "codepoint": "E0F6"
+    },
+    {
+      "id": "30",
+      "name": "BCWarrior",
+      "codepoint": "E0F7"
+    },
+    {
+      "id": "28",
+      "name": "MrDestructoid",
+      "codepoint": "E0F8"
+    },
+    {
+      "id": "26",
+      "name": "JonCarnage",
+      "codepoint": "E0F9"
+    },
+    {
+      "id": "22",
+      "name": "RedCoat",
+      "codepoint": "E0FA"
+    },
+    {
+      "id": "18",
+      "name": "TheRinger",
+      "codepoint": "E0FB"
+    },
+    {
+      "id": "17",
+      "name": "StoneLightning",
+      "codepoint": "E0FC"
+    },
+    {
+      "id": "16",
+      "name": "OptimizePrime",
+      "codepoint": "E0FD"
+    },
+    {
+      "id": "15",
+      "name": "JKanStyle",
+      "codepoint": "E0FE"
+    },
+    {
+      "id": "14",
+      "name": "R)",
+      "codepoint": "E0FF"
+    },
+    {
+      "id": "13",
+      "name": ";P",
+      "codepoint": "E100"
+    },
+    {
+      "id": "12",
+      "name": ":P",
+      "codepoint": "E101"
+    },
+    {
+      "id": "11",
+      "name": ";)",
+      "codepoint": "E102"
+    },
+    {
+      "id": "10",
+      "name": ":/",
+      "codepoint": "E103"
+    },
+    {
+      "id": "9",
+      "name": "<3",
+      "codepoint": "E104"
+    },
+    {
+      "id": "8",
+      "name": ":O",
+      "codepoint": "E105"
+    },
+    {
+      "id": "7",
+      "name": "B)",
+      "codepoint": "E106"
+    },
+    {
+      "id": "6",
+      "name": "O_o",
+      "codepoint": "E107"
+    },
+    {
+      "id": "5",
+      "name": ":|",
+      "codepoint": "E108"
+    },
+    {
+      "id": "4",
+      "name": ">(",
+      "codepoint": "E109"
+    },
+    {
+      "id": "3",
+      "name": ":D",
+      "codepoint": "E10A"
+    },
+    {
+      "id": "2",
+      "name": ":(",
+      "codepoint": "E10B"
+    },
+    {
+      "id": "1",
+      "name": ":)",
+      "codepoint": "E10C"
     }
   ]
 }

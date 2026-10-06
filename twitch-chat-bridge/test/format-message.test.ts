@@ -12,10 +12,11 @@ test("formats chat as a safely encoded tellraw command", () => {
   expect(command).not.toBeNull();
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
+  expect(component.font).toBeUndefined();
   expect(component.extra).toEqual([
     { text: "[Twitch]", color: "dark_purple" },
-    { text: " Streamer:" },
-    { text: ' hello "world"' }
+    { text: " Streamer: " },
+    { text: 'hello "world"' }
   ]);
 });
 
@@ -27,8 +28,8 @@ test("adds colored Twitch roles and uses the highest-priority role", () => {
   expect(component.extra).toEqual([
     { text: "[Twitch]", color: "dark_purple" },
     { text: " [BROADCASTER]", color: "gold" },
-    { text: " Streamer:" },
-    { text: " hello" }
+    { text: " Streamer: " },
+    { text: "hello" }
   ]);
 });
 
@@ -57,12 +58,25 @@ test("wraps Twitch emotes using the provided message offsets", () => {
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
   expect(component.extra.slice(1)).toEqual([
-    { text: " viewer:" },
-    { text: " Hello " },
+    { text: " viewer: " },
+    { text: "Hello " },
     { text: "\uE000", font: "twitch:emotes" },
     { text: " and " },
     { text: "[PogChamp]!" }
   ]);
+});
+
+test("keeps emote-heavy relay commands compact", () => {
+  const names = Array.from({ length: 35 }, () => "Kappa");
+  const message = names.join(" ");
+  const ranges = names.map((_, index) => {
+    const start = index * 6;
+    return `${start}-${start + 4}`;
+  });
+  const command = formatMinecraftCommand("viewer", message, null, { "25": ranges }, emoteMap);
+
+  expect(command).not.toBeNull();
+  expect(command!.length).toBeLessThan(512);
 });
 
 test("wraps UTF-16-indexed emotes after supplementary Unicode characters", () => {
@@ -75,8 +89,8 @@ test("wraps UTF-16-indexed emotes after supplementary Unicode characters", () =>
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
   expect(component.extra.slice(1)).toEqual([
-    { text: " viewer:" },
-    { text: " 🎉 " },
+    { text: " viewer: " },
+    { text: "🎉 " },
     { text: "\uE000", font: "twitch:emotes" }
   ]);
 });
@@ -88,8 +102,8 @@ test("ignores malformed and out-of-range emote offsets", () => {
   expect(command).not.toBeNull();
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
-  expect(component.extra[1].text).toBe(" viewer:");
-  expect(component.extra[2].text).toBe(" Kappa");
+  expect(component.extra[1].text).toBe(" viewer: ");
+  expect(component.extra[2].text).toBe("Kappa");
 });
 
 test("strips line breaks and control characters from chat input", () => {
@@ -98,8 +112,8 @@ test("strips line breaks and control characters from chat input", () => {
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
   expect(component.extra[0].text).toBe("[Twitch]");
-  expect(component.extra[1].text).toBe(" user:");
-  expect(component.extra[2].text).toBe(" hello say hacked there");
+  expect(component.extra[1].text).toBe(" user: ");
+  expect(component.extra[2].text).toBe("hello say hacked there");
 });
 
 test("limits message and username lengths and ignores empty messages", () => {
@@ -108,8 +122,8 @@ test("limits message and username lengths and ignores empty messages", () => {
   const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
 
   expect(component.extra[0].text).toBe("[Twitch]");
-  expect(component.extra[1].text).toBe(" uuuuuuuuuuuuuuuuuuuuuuuuu:");
-  expect(component.extra[2].text.length).toBe(301);
+  expect(component.extra[1].text).toBe(" uuuuuuuuuuuuuuuuuuuuuuuuu: ");
+  expect(component.extra[2].text.length).toBe(300);
   expect(formatMinecraftCommand("user", " \n ")).toBeNull();
 });
 });

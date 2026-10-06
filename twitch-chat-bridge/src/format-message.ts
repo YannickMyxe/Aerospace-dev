@@ -40,6 +40,16 @@ function formatEmotes(
   const result: Array<{ text: string; font?: string }> = [];
   let cursor = 0;
   let length = 0;
+  const appendFontText = (text: string): void => {
+    const remaining = MAX_MESSAGE_LENGTH - length;
+    if (remaining <= 0) return;
+    const cleaned = Array.from(text).slice(0, remaining).join("");
+    if (!cleaned) return;
+    const previous = result.at(-1);
+    if (previous?.font === "twitch:emotes") previous.text += cleaned;
+    else result.push({ text: cleaned, font: "twitch:emotes" });
+    length += Array.from(cleaned).length;
+  };
   const appendText = (text: string): void => {
     const remaining = MAX_MESSAGE_LENGTH - length;
     if (remaining <= 0) return;
@@ -54,16 +64,22 @@ function formatEmotes(
 
   for (const range of ranges) {
     if (range.start < cursor) continue;
-    appendText(message.slice(cursor, range.start));
     const registryEntry = emoteMap.get(range.id);
+    const separator = message.slice(cursor, range.start);
+    const previous = result.at(-1);
+    if (registryEntry && previous?.font === "twitch:emotes" && /^\s+$/.test(separator)) {
+      appendFontText(separator.replace(/[\u0000-\u001f\u007f]/g, " "));
+    } else {
+      appendText(separator);
+    }
+
     const emoteName = cleanText(message.slice(range.start, range.end + 1), 50);
     const replacement = registryEntry
-      ? {
-          text: String.fromCodePoint(Number.parseInt(registryEntry.codepoint, 16)),
-          font: "twitch:emotes"
-        }
+      ? String.fromCodePoint(Number.parseInt(registryEntry.codepoint, 16))
       : { text: `[${emoteName}]` };
-    if (length < MAX_MESSAGE_LENGTH) {
+    if (typeof replacement === "string") {
+      appendFontText(replacement);
+    } else if (length < MAX_MESSAGE_LENGTH) {
       result.push(replacement);
       length += Array.from(replacement.text).length;
     }
@@ -107,17 +123,13 @@ function formatMinecraftCommand(
   const safeUsername = cleanText(username, 25) || "unknown";
   const messageParts = formatEmotes(message, emotes, emoteMap);
   if (messageParts.length === 0) return null;
+  const safeMessage = messageParts.map((part) => part.text).join("");
 
   const extra: Array<{ text: string; color?: string }> = [
     { text: "[Twitch]", color: "dark_purple" }
   ];
   if (role) extra.push({ text: ` [${role}]`, color: ROLE_COLORS[role] });
-  extra.push({ text: ` ${safeUsername}:` });
-  if (messageParts[0] && !messageParts[0].font) {
-    messageParts[0].text = ` ${messageParts[0].text}`;
-  } else {
-    extra.push({ text: " " });
-  }
+  extra.push({ text: ` ${safeUsername}: ` });
   extra.push(...messageParts);
 
   const component = {
