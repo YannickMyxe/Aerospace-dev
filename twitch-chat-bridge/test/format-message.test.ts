@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { formatMinecraftCommand } from "../src/format-message";
+import { formatMinecraftCommand, getChatRole } from "../src/format-message";
 
 describe("formatMinecraftCommand", () => {
 test("formats chat as a safely encoded tellraw command", () => {
@@ -11,6 +11,33 @@ test("formats chat as a safely encoded tellraw command", () => {
     { text: "[Twitch]", color: "dark_purple" },
     { text: ' Streamer: hello "world"' }
   ]);
+});
+
+test("adds colored Twitch roles and uses the highest-priority role", () => {
+  const command = formatMinecraftCommand("Streamer", "hello", "BROADCASTER");
+  expect(command).not.toBeNull();
+  const component = JSON.parse(command?.slice("tellraw @a ".length) ?? "");
+
+  expect(component.extra).toEqual([
+    { text: "[Twitch]", color: "dark_purple" },
+    { text: " [BROADCASTER]", color: "gold" },
+    { text: " Streamer: hello" }
+  ]);
+});
+
+test("detects moderator, VIP, and subscriber roles from Twitch tags", () => {
+  expect(getChatRole({ mod: true })).toBe("MOD");
+  expect(getChatRole({ badges: { vip: "1" } })).toBe("VIP");
+  expect(getChatRole({ subscriber: true })).toBe("SUB");
+  expect(getChatRole({})).toBeNull();
+});
+
+test("moderator role takes priority over VIP and subscriber", () => {
+  expect(getChatRole({
+    mod: true,
+    subscriber: true,
+    badges: { moderator: "1", vip: "1", subscriber: "1" }
+  })).toBe("MOD");
 });
 
 test("strips line breaks and control characters from chat input", () => {

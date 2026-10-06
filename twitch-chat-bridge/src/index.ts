@@ -1,7 +1,7 @@
 import readline from "node:readline";
 import { Rcon } from "rcon-client";
 import tmi from "tmi.js";
-import { formatMinecraftCommand } from "./format-message";
+import { formatMinecraftCommand, getChatRole } from "./format-message";
 
 const dryRun = (process.env.DRY_RUN ?? "true").toLowerCase() === "true";
 
@@ -59,7 +59,11 @@ async function runBridge(): Promise<void> {
   client.on("message", (_channel, tags, message, self) => {
     if (self) return;
 
-    const command = formatMinecraftCommand(tags["display-name"] || tags.username || "unknown", message);
+    const command = formatMinecraftCommand(
+      tags["display-name"] || tags.username || "unknown",
+      message,
+      getChatRole(tags)
+    );
     if (!command) return;
 
     const now = Date.now();
