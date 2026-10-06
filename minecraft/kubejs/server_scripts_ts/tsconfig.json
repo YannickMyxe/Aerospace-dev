@@ -2,11 +2,10 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ES2022"],
-    "module": "CommonJS",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "moduleDetection": "legacy",
-    "rootDir": ".",
-    "outDir": "../server_scripts/compiled",
+    "noEmit": true,
     "allowJs": false,
     "types": [],
     "baseUrl": ".",

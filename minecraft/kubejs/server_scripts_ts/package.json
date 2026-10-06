@@ -2,12 +2,14 @@
   "name": "server_scripts_ts",
   "private": true,
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "bun run check && bun run bundle",
+    "bundle": "bun run build.mjs",
     "check": "tsc --project tsconfig.json --noEmit",
-    "watch": "tsc --project tsconfig.json --watch"
+    "watch": "bun run build.mjs --watch"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "esbuild": "^0.25.0",
     "typescript": "^5.9.3"
   }
 }

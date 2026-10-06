@@ -1,9 +1,5 @@
-type Item = KubeJSItemId;
-type ItemTag = `#${import("@special/types").RegistryTypes.ItemTag}`;
-type ItemIngredient = ReturnType<typeof Ingredient.of>;
-
-const multiple = (item: Item, amount: number): string => `${amount}x ${item}`;
-const itemTag = (id: string): ItemTag => `#${id}` as ItemTag;
+import type {Item, ItemTag, ItemIngredient} from './utils'
+import {multiple, itemTag} from './utils'
 
 ServerEvents.recipes(event => {
     const string: Item = "minecraft:string";

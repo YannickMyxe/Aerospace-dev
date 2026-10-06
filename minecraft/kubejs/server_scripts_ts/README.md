@@ -10,7 +10,7 @@ Install the local TypeScript compiler once:
 bun install
 ```
 
-Compile once before loading or reloading server scripts:
+Bundle once before loading or reloading server scripts:
 
 ```sh
 bun run build
@@ -23,11 +23,15 @@ bun run watch
 ```
 
 Run `bun run check` to type-check without emitting files. KubeJS typings are read
-from the generated declarations in `../../.probe`. Keep scripts in the global
-KubeJS style (for example, `ServerEvents.recipes(...)`). Type-only imports are
-not needed in scripts: shared type aliases such as `KubeJSItemId` are declared
-in `references.d.ts`. Runtime imports and exports are not supported by this
-non-module script output.
+from the generated declarations in `../../.probe`. The build bundles each
+top-level `.ts` script and its relative utility imports into a standalone IIFE, so
+KubeJS never loads TypeScript's CommonJS `exports` code or the source utility
+module as a separate script. Every top-level `.ts` file except declaration files
+is automatically treated as an entry point, so add new KubeJS scripts there and
+put shared utilities in subfolders. `bun run watch` watches and rebuilds the
+entry points; run `bun run check` separately for type errors. Keep scripts in
+the global KubeJS style (for example, `ServerEvents.recipes(...)`). Type-only
+imports are erased during bundling.
 
 The current generated declarations contain a tuple label named `with`, which
 TypeScript cannot parse. In `../../.probe/@package/ca/teamdman/sfml/ast/index.d.ts`,
