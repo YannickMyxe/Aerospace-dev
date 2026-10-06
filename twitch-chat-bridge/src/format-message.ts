@@ -167,4 +167,17 @@ function formatMinecraftCommand(
   return { command, truncated };
 }
 
-export { formatMinecraftCommand, getChatRole };
+function formatReadyCommand(channel: string): string {
+  const safeChannel = cleanText(channel.replace(/^#/, ""), 25) || "channel";
+  const component = {
+    text: "",
+    extra: [
+      { text: "[Twitch-Bridge]", color: "red" },
+      { text: ` Chat relay connected`, color: "gray" }
+    ]
+  };
+
+  return `tellraw @a ${JSON.stringify(component)}`;
+}
+
+export { formatMinecraftCommand, formatReadyCommand, getChatRole };

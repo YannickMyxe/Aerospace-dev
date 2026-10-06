@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { formatMinecraftCommand, getChatRole } from "../src/format-message";
+import { formatMinecraftCommand, formatReadyCommand, getChatRole } from "../src/format-message";
 import type { EmoteRegistryEntry } from "../src/emote-map";
 
 const emoteMap = new Map<string, EmoteRegistryEntry>([
@@ -7,6 +7,16 @@ const emoteMap = new Map<string, EmoteRegistryEntry>([
 ]);
 
 describe("formatMinecraftCommand", () => {
+test("formats a readiness notice for Minecraft chat", () => {
+  const command = formatReadyCommand("#ExampleChannel");
+  const component = JSON.parse(command.slice("tellraw @a ".length));
+
+  expect(component.extra).toEqual([
+    { text: "[Twitch]", color: "dark_purple" },
+    { text: " Chat relay connected to #ExampleChannel", color: "gray" }
+  ]);
+});
+
 test("formats chat as a safely encoded tellraw command", () => {
   const command = formatMinecraftCommand("Streamer", 'hello "world"');
   expect(command).not.toBeNull();

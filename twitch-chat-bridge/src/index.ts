@@ -1,7 +1,7 @@
 import readline from "node:readline";
 import { Rcon } from "rcon-client";
 import tmi from "tmi.js";
-import { formatMinecraftCommand, getChatRole } from "./format-message";
+import { formatMinecraftCommand, formatReadyCommand, getChatRole } from "./format-message";
 import { emotesById } from "./emote-map";
 
 const dryRun = (process.env.DRY_RUN ?? "true").toLowerCase() === "true";
@@ -76,13 +76,24 @@ async function runBridge(): Promise<void> {
     options: { debug: false },
     connection: { reconnect: true, secure: true },
     identity: { username, password: `oauth:${token}` },
-    channels: [channel]
+    channels: []
   });
 
   let sendQueue = Promise.resolve();
   const sentAt: number[] = [];
   const minIntervalMs = 1000;
   let lastSentAt = 0;
+  const enqueueCommand = (command: string, context: string): Promise<void> => {
+    sendQueue = sendQueue.then(async () => {
+      const waitMs = Math.max(0, lastSentAt + minIntervalMs - Date.now());
+      if (waitMs) await new Promise((resolve) => setTimeout(resolve, waitMs));
+      await sendToMinecraft(command);
+      lastSentAt = Date.now();
+    }).catch((error) => {
+      console.error(`${context}:`, errorMessage(error));
+    });
+    return sendQueue;
+  };
 
   client.on("message", (_channel, tags, message, self) => {
     if (self) return;
@@ -104,21 +115,19 @@ async function runBridge(): Promise<void> {
     }
     sentAt.push(now);
 
-    sendQueue = sendQueue.then(async () => {
-      const waitMs = Math.max(0, lastSentAt + minIntervalMs - Date.now());
-      if (waitMs) await new Promise((resolve) => setTimeout(resolve, waitMs));
-      await sendToMinecraft(formatted.command);
-      lastSentAt = Date.now();
-    }).catch((error) => {
-      console.error("Could not relay Twitch message to Minecraft:", errorMessage(error));
-    });
+    enqueueCommand(formatted.command, "Could not relay Twitch message to Minecraft");
   });
 
   client.on("connected", () => console.log(`Connected to Twitch chat: #${channel}`));
   client.on("disconnected", (reason) => console.warn("Twitch chat disconnected:", reason));
 
   await client.connect();
+  await client.join(channel);
   console.log("Twitch-to-Minecraft chat relay is running");
+  await enqueueCommand(
+    formatReadyCommand(channel),
+    "Could not announce Twitch bridge readiness in Minecraft"
+  );
 
   const shutdown = async () => {
     try {
