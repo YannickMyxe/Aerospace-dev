@@ -61,3 +61,18 @@ export const shapedSurround = (
         }
     );
 };
+
+type ItemTagEventApi = {
+    add(tag: string, item: ItemOrTag): unknown;
+};
+
+export const addItemsToSlot = (
+    event: unknown,
+    slot: string,
+    items: ItemOrTag[]
+): void => {
+    const tagEvent = event as ItemTagEventApi;
+    for (const item of items) {
+        tagEvent.add(slot, item);
+    }
+};
