@@ -10,8 +10,14 @@ if (-not (Test-Path ".env")) {
     Write-Host "Created twitch-chat-bridge/.env with dry-run enabled."
 }
 
+podman network exists twitch-chat-local
+if ($LASTEXITCODE -ne 0) {
+    podman network create twitch-chat-local
+    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+}
+
 podman build -t twitch-chat-bridge .
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-podman run --rm -i --env-file .env twitch-chat-bridge
+podman run --rm -i --network twitch-chat-local --env-file .env twitch-chat-bridge
 exit $LASTEXITCODE

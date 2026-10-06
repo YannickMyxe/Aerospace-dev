@@ -7,7 +7,7 @@ This container relays Twitch chat messages to a dedicated Minecraft server throu
 From this folder, run:
 
 ```powershell
-.\run.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\twitch-chat-bridge\run.ps1
 ```
 
 The script builds the image and starts it with `.env`. The first run creates `.env` from `.env.example`; `DRY_RUN=true` is the safe default. Type a test line such as:
@@ -27,6 +27,6 @@ The bridge is written in TypeScript and uses Bun for dependency management, test
 3. Edit `.env`, set `DRY_RUN=false`, and fill in `TWITCH_CHANNEL`, `TWITCH_BOT_USERNAME`, `TWITCH_OAUTH_TOKEN`, `RCON_HOST`, and `RCON_PASSWORD`. The OAuth value can be either the token or `oauth:<token>`.
 4. Run `.\run.ps1` again. The bridge connects to Twitch and relays chat as `[Twitch] username: message`.
 
-If Podman and the Minecraft server run on the same host, `host.containers.internal` is the default RCON hostname. If they run on different machines, use the server's private network address and restrict RCON access to the bridge host. Never commit `.env`.
+The bridge joins the `twitch-chat-local` Podman network. For the local test server, keep `RCON_HOST=local-minecraft` and copy the generated `RCON_PASSWORD` from `local-minecraft-server/.env` into this bridge's `.env`. If using a server on the same host but outside Podman, set `RCON_HOST=host.containers.internal`; for a remote server, use its private network address and restrict RCON access to the bridge host. Never commit `.env`.
 
-The bridge displays messages as plain Minecraft text; Twitch messages are not executed as commands. Messages are limited to 300 characters, with a maximum relay rate of one per second and 20 per minute.
+The bridge displays `[Twitch]` in dark purple and the username/message in the default chat color. Twitch messages are plain text, not executable commands. Messages are limited to 300 characters, with a maximum relay rate of one per second and 20 per minute.

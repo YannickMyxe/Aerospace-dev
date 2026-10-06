@@ -11,7 +11,15 @@ function formatMinecraftCommand(username: string, message: string): string | nul
   const safeMessage = cleanText(message, MAX_MESSAGE_LENGTH);
   if (!safeMessage) return null;
 
-  return `tellraw @a ${JSON.stringify({ text: `[Twitch] ${safeUsername}: ${safeMessage}` })}`;
+  const component = {
+    text: "",
+    extra: [
+      { text: "[Twitch]", color: "dark_purple" },
+      { text: ` ${safeUsername}: ${safeMessage}` }
+    ]
+  };
+
+  return `tellraw @a ${JSON.stringify(component)}`;
 }
 
 export { formatMinecraftCommand };
