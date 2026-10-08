@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 35
 	# Range: > -2147483648
-	cost = 35
+	cost = 30
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -27,7 +27,7 @@
 	invalid_combos = []
 	# Default: 6.0
 	# Range: 0.0 ~ 2.147483647E9
-	damage = 6.0
+	damage = 8.0
 	# Default: 3.0
 	# Range: 0.0 ~ 2.147483647E9
-	amplify = 3.0
+	amplify = 4.0

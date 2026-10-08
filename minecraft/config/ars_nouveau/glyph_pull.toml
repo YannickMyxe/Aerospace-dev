@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 15
 	# Range: > -2147483648
-	cost = 15
+	cost = 12
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -28,7 +28,7 @@
 	#Base movement velocity
 	# Default: 1.0
 	# Range: 0.0 ~ 1.7976931348623157E308
-	base_value = 1.0
+	base_value = 1.26
 	# Default: 0.5
 	# Range: 0.0 ~ 2.147483647E9
-	amplify = 0.5
+	amplify = 0.84

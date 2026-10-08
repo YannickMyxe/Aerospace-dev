@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 15
 	# Range: > -2147483648
-	cost = 15
+	cost = 12
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -28,8 +28,8 @@
 	#Potion duration, in seconds
 	# Default: 10
 	# Range: > 0
-	potion_time = 10
+	potion_time = 12
 	#Extend time duration, in seconds
 	# Default: 5
 	# Range: > 0
-	extend_time = 5
+	extend_time = 6

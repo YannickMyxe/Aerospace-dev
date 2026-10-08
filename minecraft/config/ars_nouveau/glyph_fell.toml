@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 150
 	# Range: > -2147483648
-	cost = 150
+	cost = 50
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -28,8 +28,8 @@
 	#Base amount of harvested blocks
 	# Default: 50
 	# Range: > 0
-	base_harvest = 50
+	base_harvest = 64
 	#Additional max blocks per AOE
 	# Default: 50
 	# Range: > 0
-	aoe_bonus = 50
+	aoe_bonus = 64

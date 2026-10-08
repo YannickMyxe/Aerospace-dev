@@ -27,10 +27,10 @@
 	invalid_combos = []
 	# Default: 7.0
 	# Range: 0.0 ~ 2.147483647E9
-	damage = 7.0
+	damage = 6.0
 	# Default: 3.0
 	# Range: 0.0 ~ 2.147483647E9
-	amplify = 3.0
+	amplify = 4.0
 	#Extend time duration, in seconds
 	# Default: 1
 	# Range: > 0

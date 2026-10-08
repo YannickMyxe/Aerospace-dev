@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 100
 	# Range: > -2147483648
-	cost = 100
+	cost = 81
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -27,11 +27,11 @@
 	invalid_combos = []
 	# Default: 5.0
 	# Range: 0.0 ~ 2.147483647E9
-	damage = 5.0
+	damage = 4.0
 	# Default: 3.0
 	# Range: 0.0 ~ 2.147483647E9
-	amplify = 3.0
+	amplify = 4.0
 	#Bonus damage for wet entities
 	# Default: 2.0
 	# Range: 0.0 ~ 1.7976931348623157E308
-	wet_bonus = 2.0
+	wet_bonus = 12.0

@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 10
 	# Range: > -2147483648
-	cost = 10
+	cost = 5
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell

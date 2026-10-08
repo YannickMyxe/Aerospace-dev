@@ -28,8 +28,8 @@
 	#Potion duration, in seconds
 	# Default: 30
 	# Range: > 0
-	potion_time = 30
+	potion_time = 36
 	#Extend time duration, in seconds
 	# Default: 8
 	# Range: > 0
-	extend_time = 8
+	extend_time = 12

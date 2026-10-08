@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 50
 	# Range: > -2147483648
-	cost = 50
+	cost = 55
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -18,7 +18,7 @@
 	glyph_tier = 2
 	#Limits the number of times a given augment may be applied to a given effect
 	#Example entry: "glyph_amplify=5"
-	augment_limits = ["ars_nouveau:glyph_amplify=2"]
+	augment_limits = ["ars_nouveau:glyph_amplify=4"]
 	#How much an augment should cost when used on this effect or form. This overrides the default cost in the augment config.
 	#Example entry: "glyph_amplify=50"
 	augment_cost_overrides = []
@@ -27,11 +27,11 @@
 	invalid_combos = []
 	# Default: 5.0
 	# Range: 0.0 ~ 2.147483647E9
-	damage = 5.0
+	damage = 6.0
 	# Default: 2.5
 	# Range: 0.0 ~ 2.147483647E9
-	amplify = 2.5
+	amplify = 2.85
 	#Damage per block in the air
 	# Default: 0.75
 	# Range: 0.0 ~ 1.7976931348623157E308
-	airDamage = 0.75
+	airDamage = 1.25

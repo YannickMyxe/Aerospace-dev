@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 10
 	# Range: > -2147483648
-	cost = 10
+	cost = 8
 	#Is Starter Glyph?
 	starter = true
 	#The maximum number of times this glyph may appear in a single spell
@@ -25,4 +25,4 @@
 	#Max lifespan of the projectile, in seconds.
 	# Default: 60
 	# Range: > 0
-	max_lifespan = 60
+	max_lifespan = 64

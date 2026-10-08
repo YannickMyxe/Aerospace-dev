@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 15
 	# Range: > -2147483648
-	cost = 15
+	cost = 35
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -18,7 +18,7 @@
 	glyph_tier = 1
 	#Limits the number of times a given augment may be applied to a given effect
 	#Example entry: "glyph_amplify=5"
-	augment_limits = ["ars_nouveau:glyph_sensitive=1"]
+	augment_limits = ["ars_nouveau:glyph_sensitive=1", "ars_nouveau:glyph_amplify=6"]
 	#How much an augment should cost when used on this effect or form. This overrides the default cost in the augment config.
 	#Example entry: "glyph_amplify=50"
 	augment_cost_overrides = []
@@ -28,8 +28,8 @@
 	#Extend time duration, in seconds
 	# Default: 2
 	# Range: > 0
-	extend_time = 2
+	extend_time = 1.2
 	#Potion duration, in seconds
 	# Default: 3
 	# Range: > 0
-	potion_time = 3
+	potion_time = 3.2

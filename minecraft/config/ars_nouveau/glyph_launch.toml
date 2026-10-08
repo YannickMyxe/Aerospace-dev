@@ -5,7 +5,7 @@
 	#Cost
 	# Default: 30
 	# Range: > -2147483648
-	cost = 30
+	cost = 36
 	#Is Starter Glyph?
 	starter = false
 	#The maximum number of times this glyph may appear in a single spell
@@ -28,7 +28,7 @@
 	#Base knockup amount
 	# Default: 0.8
 	# Range: 0.0 ~ 1.7976931348623157E308
-	knockup = 0.8
+	knockup = 1.2
 	# Default: 0.25
 	# Range: 0.0 ~ 2.147483647E9
-	amplify = 0.25
+	amplify = 0.6
