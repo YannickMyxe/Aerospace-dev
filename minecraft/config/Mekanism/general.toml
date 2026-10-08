@@ -24,7 +24,7 @@ maxSolarNeutronActivatorRate = 64
 	#Amount of heat produced per fuel tick of a fuel's burn time in the Fuelwood Heater.
 	# Default: 400.0
 	# Range: 0.1 ~ 4000000.0
-	heatPerFuelTick = 400.0
+	heatPerFuelTick = 820.0
 	#Number of ticks to burn an item at in a Fuelwood Heater. Use this config option to effectively make Fuelwood Heaters burn faster but produce the same amount of heat per item.
 	# Default: 1
 	# Range: 1 ~ 1000
@@ -32,7 +32,7 @@ maxSolarNeutronActivatorRate = 64
 	#How much heat energy is created from one Joule of regular energy in the Resistive Heater.
 	# Default: 0.6
 	# Range: 0.0 ~ 1.0
-	resistiveEfficiency = 0.6
+	resistiveEfficiency = 0.64
 
 #Settings for configuring Cardboard Boxes
 [cardboard_box]

@@ -45,7 +45,7 @@
         // Chest feature bounciness
         // Range: 0.0 ~ 1.0
         // Default: 0.27
-        bounciness: 0.27,
+        bounciness: 0.32,
         // Chest feature physics damping
         // Range: 0.0 ~ 1.0
         // Default: 0.375
@@ -53,7 +53,7 @@
         // Chest feature scale, multiplier of Estrogen level scale
         // Range: 0 ~ 120
         // Default: 100
-        scale: 100
+        scale: 124
     },
     // Settings for the dream block
     DreamBlock: {

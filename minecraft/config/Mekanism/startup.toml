@@ -6,54 +6,54 @@
 		#Armor value of the Armored Free Runners
 		# Default: 3
 		# Range: > 0
-		armor = 3
+		armor = 5
 		#Toughness value of the Armored Free Runners.
 		# Default: 2.0
 		# Range: 0.0 ~ 3.4028234663852886E38
-		toughness = 2.0
+		toughness = 3.0
 		#Knockback resistance value of the Armored Free Runners.
 		# Default: 0.0
 		# Range: 0.0 ~ 3.4028234663852886E38
-		knockbackResistance = 0.0
+		knockbackResistance = 0.25
 
 	#Settings for configuring Armored Jetpacks
 	[gear.armored_jetpack]
 		#Armor value of the Armored Jetpacks
 		# Default: 8
 		# Range: > 0
-		armor = 8
+		armor = 10
 		#Toughness value of the Armored Jetpacks.
 		# Default: 2.0
 		# Range: 0.0 ~ 3.4028234663852886E38
-		toughness = 2.0
+		toughness = 2.5
 		#Knockback resistance value of the Armored Jetpacks.
 		# Default: 0.0
 		# Range: 0.0 ~ 3.4028234663852886E38
-		knockbackResistance = 0.0
+		knockbackResistance = 0.5
 
 	#Settings for configuring the MekaSuit
 	[gear.mekasuit]
 		#Armor value of MekaSuit Helmets.
 		# Default: 3
 		# Range: > 0
-		helmetArmor = 3
+		helmetArmor = 8
 		#Armor value of MekaSuit BodyArmor.
 		# Default: 8
 		# Range: > 0
-		bodyArmorArmor = 8
+		bodyArmorArmor = 16
 		#Armor value of MekaSuit Pants.
 		# Default: 6
 		# Range: > 0
-		pantsArmor = 6
+		pantsArmor = 14
 		#Armor value of MekaSuit Boots.
 		# Default: 3
 		# Range: > 0
-		bootsArmor = 3
+		bootsArmor = 8
 		#Toughness value of the MekaSuit.
 		# Default: 3.0
 		# Range: 0.0 ~ 3.4028234663852886E38
-		toughness = 3.0
+		toughness = 3.2
 		#Knockback resistance value of the MekaSuit.
 		# Default: 0.10000000149011612
 		# Range: 0.0 ~ 3.4028234663852886E38
-		knockbackResistance = 0.10000000149011612
+		knockbackResistance = 0.185

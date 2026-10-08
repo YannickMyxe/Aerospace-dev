@@ -138,7 +138,7 @@
 	#Jetboots air usage in mL/tick (per Jet Boots Upgrade)
 	# Default: 12
 	# Range: > 0
-	jet_boots_air_usage = 12
+	jet_boots_air_usage = 10
 	#Jetboots height limit before cutting out, relative to world max build height
 	# Default: 64
 	# Range: > -2147483648
@@ -150,11 +150,11 @@
 	#Flippers Upgrade speed boost when in water and feet on ground
 	# Default: 0.03
 	# Range: 0.0 ~ 1.0
-	flippers_speed_boost_ground = 0.03
+	flippers_speed_boost_ground = 0.035
 	#Flippers Upgrade speed boost when floating in water
 	# Default: 0.045
 	# Range: 0.0 ~ 1.0
-	flippers_speed_boost_floating = 0.045
+	flippers_speed_boost_floating = 0.055
 	#Air usage for armor repair, in mL per Item Life Upgrade per point of damage repaired
 	# Default: 100
 	# Range: > 0

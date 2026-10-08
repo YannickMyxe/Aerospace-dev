@@ -3,35 +3,35 @@
 	#Maximum number of Joules Basic energy cubes can store.
 	# Default: 4000000
 	# Range: 1 ~ 9223372036854775807
-	basicCapacity = 4000000
+	basicCapacity = 4800000
 	#Output rate in Joules of Basic energy cubes.
 	# Default: 4000
 	# Range: 1 ~ 9223372036854775807
-	basicOutput = 4000
+	basicOutput = 4200
 	#Maximum number of Joules Advanced energy cubes can store.
 	# Default: 16000000
 	# Range: 1 ~ 9223372036854775807
-	advancedCapacity = 16000000
+	advancedCapacity = 18000000
 	#Output rate in Joules of Advanced energy cubes.
 	# Default: 16000
 	# Range: 1 ~ 9223372036854775807
-	advancedOutput = 16000
+	advancedOutput = 18000
 	#Maximum number of Joules Elite energy cubes can store.
 	# Default: 64000000
 	# Range: 1 ~ 9223372036854775807
-	eliteCapacity = 64000000
+	eliteCapacity = 64800000
 	#Output rate in Joules of Elite energy cubes.
 	# Default: 64000
 	# Range: 1 ~ 9223372036854775807
-	eliteOutput = 64000
+	eliteOutput = 64800
 	#Maximum number of Joules Ultimate energy cubes can store.
 	# Default: 256000000
 	# Range: 1 ~ 9223372036854775807
-	ultimateCapacity = 256000000
+	ultimateCapacity = 512000000
 	#Output rate in Joules of Ultimate energy cubes.
 	# Default: 256000
 	# Range: 1 ~ 9223372036854775807
-	ultimateOutput = 256000
+	ultimateOutput = 512000
 	#Maximum number of Joules Creative energy cubes can store.
 	# Default: 9223372036854775807
 	# Range: 1 ~ 9223372036854775807
@@ -50,7 +50,7 @@
 	#Output rate of Basic fluid tanks in mB.
 	# Default: 1000
 	# Range: > 1
-	basicOutput = 1000
+	basicOutput = 1200
 	#Storage size of Advanced fluid tanks in mB.
 	# Default: 64000
 	# Range: > 1
@@ -58,7 +58,7 @@
 	#Output rate of Advanced fluid tanks in mB.
 	# Default: 4000
 	# Range: > 1
-	advancedOutput = 4000
+	advancedOutput = 4200
 	#Storage size of Elite fluid tanks in mB.
 	# Default: 128000
 	# Range: > 1
@@ -66,15 +66,15 @@
 	#Output rate of Elite fluid tanks in mB.
 	# Default: 16000
 	# Range: > 1
-	eliteOutput = 16000
+	eliteOutput = 18000
 	#Storage size of Ultimate fluid tanks in mB.
 	# Default: 256000
 	# Range: > 1
-	ultimateCapacity = 256000
+	ultimateCapacity = 512000
 	#Output rate of Ultimate fluid tanks in mB.
 	# Default: 64000
 	# Range: > 1
-	ultimateOutput = 64000
+	ultimateOutput = 128000
 	#Storage size of Creative fluid tanks in mB.
 	# Default: 2147483647
 	# Range: > 1
@@ -89,35 +89,35 @@
 	#Storage size of Basic chemical tanks in mB.
 	# Default: 64000
 	# Range: 1 ~ 9223372036854775807
-	basicCapacity = 64000
+	basicCapacity = 68000
 	#Output rate of Basic chemical tanks in mB.
 	# Default: 1000
 	# Range: 1 ~ 9223372036854775807
-	basicOutput = 1000
+	basicOutput = 1200
 	#Storage size of Advanced chemical tanks in mB.
 	# Default: 256000
 	# Range: 1 ~ 9223372036854775807
-	advancedCapacity = 256000
+	advancedCapacity = 512000
 	#Output rate of Advanced chemical tanks in mB.
 	# Default: 16000
 	# Range: 1 ~ 9223372036854775807
-	advancedOutput = 16000
+	advancedOutput = 32000
 	#Storage size of Elite chemical tanks in mB.
 	# Default: 1024000
 	# Range: 1 ~ 9223372036854775807
-	eliteCapacity = 1024000
+	eliteCapacity = 1240000
 	#Output rate of Elite chemical tanks in mB.
 	# Default: 128000
 	# Range: 1 ~ 9223372036854775807
-	eliteOutput = 128000
+	eliteOutput = 256000
 	#Storage size of Ultimate chemical tanks in mB.
 	# Default: 8192000
 	# Range: 1 ~ 9223372036854775807
-	ultimateCapacity = 8192000
+	ultimateCapacity = 81920000
 	#Output rate of Ultimate chemical tanks in mB.
 	# Default: 512000
 	# Range: 1 ~ 9223372036854775807
-	ultimateOutput = 512000
+	ultimateOutput = 1024000
 	#Storage size of Creative chemical tanks in mB.
 	# Default: 9223372036854775807
 	# Range: 1 ~ 9223372036854775807
@@ -193,38 +193,38 @@
 		#Internal buffer in Joules of each Basic universal cable.
 		# Default: 8000
 		# Range: 1 ~ 9223372036854775807
-		basicCapacity = 8000
+		basicCapacity = 8400
 		#Internal buffer in Joules of each Advanced universal cable.
 		# Default: 128000
 		# Range: 1 ~ 9223372036854775807
-		advancedCapacity = 128000
+		advancedCapacity = 128240
 		#Internal buffer in Joules of each Elite universal cable.
 		# Default: 1024000
 		# Range: 1 ~ 9223372036854775807
-		eliteCapacity = 1024000
+		eliteCapacity = 1224000
 		#Internal buffer in Joules of each Ultimate universal cable.
 		# Default: 8192000
 		# Range: 1 ~ 9223372036854775807
-		ultimateCapacity = 8192000
+		ultimateCapacity = 8899000
 
 	#Settings for configuring Mechanical Pipes
 	[transmitters.fluid]
 		#Capacity of Basic mechanical pipes in mB.
 		# Default: 2000
 		# Range: > 1
-		basicCapacity = 2000
+		basicCapacity = 2200
 		#Pump rate of Basic mechanical pipes in mB/t.
 		# Default: 250
 		# Range: > 1
-		basicPullAmount = 250
+		basicPullAmount = 252
 		#Capacity of Advanced mechanical pipes in mB.
 		# Default: 8000
 		# Range: > 1
-		advancedCapacity = 8000
+		advancedCapacity = 8400
 		#Pump rate of Advanced mechanical pipes in mB/t.
 		# Default: 1000
 		# Range: > 1
-		advancedPullAmount = 1000
+		advancedPullAmount = 1200
 		#Capacity of Elite mechanical pipes in mB.
 		# Default: 32000
 		# Range: > 1
@@ -232,34 +232,34 @@
 		#Pump rate of Elite mechanical pipes in mB/t.
 		# Default: 8000
 		# Range: > 1
-		elitePullAmount = 8000
+		elitePullAmount = 8800
 		#Capacity of Ultimate mechanical pipes in mB.
 		# Default: 128000
 		# Range: > 1
-		ultimateCapacity = 128000
+		ultimateCapacity = 256000
 		#Pump rate of Ultimate mechanical pipes in mB/t.
 		# Default: 32000
 		# Range: > 1
-		ultimatePullAmount = 32000
+		ultimatePullAmount = 64000
 
 	#Settings for configuring Pressurized Tubes
 	[transmitters.chemical]
 		#Capacity of Basic pressurized tubes in mB.
 		# Default: 4000
 		# Range: 1 ~ 9223372036854775807
-		basicCapacity = 4000
+		basicCapacity = 4200
 		#Pump rate of Basic pressurized tubes in mB/t.
 		# Default: 750
 		# Range: 1 ~ 9223372036854775807
-		basicPullAmount = 750
+		basicPullAmount = 755
 		#Capacity of Advanced pressurized tubes in mB.
 		# Default: 16000
 		# Range: 1 ~ 9223372036854775807
-		advancedCapacity = 16000
+		advancedCapacity = 16420
 		#Pump rate of Advanced pressurized tubes in mB/t.
 		# Default: 2000
 		# Range: 1 ~ 9223372036854775807
-		advancedPullAmount = 2000
+		advancedPullAmount = 2200
 		#Capacity of Elite pressurized tubes in mB.
 		# Default: 256000
 		# Range: 1 ~ 9223372036854775807
@@ -271,11 +271,11 @@
 		#Capacity of Ultimate pressurized tubes in mB.
 		# Default: 1024000
 		# Range: 1 ~ 9223372036854775807
-		ultimateCapacity = 1024000
+		ultimateCapacity = 2048000
 		#Pump rate of Ultimate pressurized tubes in mB/t.
 		# Default: 256000
 		# Range: 1 ~ 9223372036854775807
-		ultimatePullAmount = 256000
+		ultimatePullAmount = 512000
 
 	#Settings for configuring Logistical Transporters
 	[transmitters.items]
@@ -286,7 +286,7 @@
 		#Five times the travel speed in m/s of Basic logistical transporter. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 5
 		# Range: > 1
-		basicSpeed = 5
+		basicSpeed = 6
 		#Item throughput rate of Advanced logistical transporters in items/half second. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 16
 		# Range: > 1
@@ -294,7 +294,7 @@
 		#Five times the travel speed in m/s of Advanced logistical transporter. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 10
 		# Range: > 1
-		advancedSpeed = 10
+		advancedSpeed = 16
 		#Item throughput rate of Elite logistical transporters in items/half second. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 32
 		# Range: > 1
@@ -302,7 +302,7 @@
 		#Five times the travel speed in m/s of Elite logistical transporter. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 20
 		# Range: > 1
-		eliteSpeed = 20
+		eliteSpeed = 24
 		#Item throughput rate of Ultimate logistical transporters in items/half second. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 64
 		# Range: > 1
@@ -310,18 +310,18 @@
 		#Five times the travel speed in m/s of Ultimate logistical transporter. This value assumes a target tick rate of 20 ticks per second.
 		# Default: 50
 		# Range: > 1
-		ultimateSpeed = 50
+		ultimateSpeed = 64
 
 	#Settings for configuring Thermodynamic Conductors
 	[transmitters.heat]
 		#Conduction value of Basic thermodynamic conductors.
 		# Default: 5.0
 		# Range: 1.0 ~ 1.7976931348623157E308
-		basicInverseConduction = 5.0
+		basicInverseConduction = 8.0
 		#Heat capacity of Basic thermodynamic conductors.
 		# Default: 1.0
 		# Range: 1.0 ~ 1.7976931348623157E308
-		basicHeatCapacity = 1.0
+		basicHeatCapacity = 2.0
 		#Insulation value of Basic thermodynamic conductor.
 		# Default: 10.0
 		# Range: 0.0 ~ 1.7976931348623157E308
@@ -349,7 +349,7 @@
 		#Insulation value of Elite thermodynamic conductor.
 		# Default: 8000.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		eliteInsulation = 8000.0
+		eliteInsulation = 8800.0
 		#Conduction value of Ultimate thermodynamic conductors.
 		# Default: 5.0
 		# Range: 1.0 ~ 1.7976931348623157E308
@@ -361,4 +361,4 @@
 		#Insulation value of Ultimate thermodynamic conductor.
 		# Default: 100000.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		ultimateInsulation = 100000.0
+		ultimateInsulation = 125000.0

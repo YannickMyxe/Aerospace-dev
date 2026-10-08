@@ -22,7 +22,7 @@
 	#The max size of Assembler Matrix
 	# Default: 6
 	# Range: 3 ~ 16
-	assembler_matrix_max_size = 6
+	assembler_matrix_max_size = 16
 
 [item]
 	#ME Infinity Cell idle energy cost (unit: AE/t)

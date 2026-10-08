@@ -7,7 +7,7 @@
         // The multiplier for the dash delta movement
         // Range: 0.0 ~ 100.0
         // Default: 2.0
-        deltaModifier: 2.0
+        deltaModifier: 2.2
     },
     // Recipe* Configuration
     Recipes: {
@@ -22,7 +22,7 @@
         estrogenPillDuration: 6000,
         // How long does Girl Power from the Crystal Estrogen Pill last in ticks
         // Default: 6000
-        crystalEstrogenPillDuration: 6000,
+        crystalEstrogenPillDuration: 6200,
         // How long does Girl Power from the Estrogen Chip Cookie last in ticks
         // Default: 6000
         estrogenChipCookieDuration: 6000

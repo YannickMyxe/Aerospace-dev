@@ -7,7 +7,7 @@
 	#Amount (joules) of energy the Atomic Disassembler can accept per tick.
 	# Default: 5000
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 5000
+	chargeRate = 7500
 	#Base Energy (Joules) usage of the Atomic Disassembler. (Gets multiplied by speed factor)
 	# Default: 10
 	# Range: 0 ~ 9223372036854775807
@@ -19,11 +19,11 @@
 	#The bonus attack damage of the Atomic Disassembler when it is out of power. (Value is in number of half hearts)
 	# Default: 4
 	# Range: 0 ~ 1000
-	minDamage = 4
+	minDamage = 5
 	#The bonus attack damage of the Atomic Disassembler when it has at least energyUsageWeapon power stored. (Value is in number of half hearts)
 	# Default: 20
 	# Range: 1 ~ 10000
-	maxDamage = 20
+	maxDamage = 25
 	#Attack speed of the Atomic Disassembler.
 	# Default: -2.4
 	# Range: -4.0 ~ 100.0
@@ -33,11 +33,11 @@
 	#Enable the 'Fast' mode for the Atomic Disassembler.
 	fastMode = true
 	#Enable the 'Vein Mining' mode for the Atomic Disassembler. This mode is limited to vein mining just ores and logs.
-	veinMining = false
+	veinMining = true
 	#The max number of blocks the Atomic Disassembler can mine using the 'Vein Mining' mode. Requires veinMining to be enabled.
 	# Default: 128
 	# Range: 2 ~ 1000000
-	miningCount = 128
+	miningCount = 172
 
 #Settings for configuring the Electric Bow
 [electric_bow]
@@ -48,7 +48,7 @@
 	#Amount (joules) of energy the Electric Bow can accept per tick.
 	# Default: 600
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 600
+	chargeRate = 690
 	#Cost in Joules of using the Electric Bow.
 	# Default: 120
 	# Range: 0 ~ 9223372036854775807
@@ -56,7 +56,7 @@
 	#Cost in Joules of using the Electric Bow with flame mode active.
 	# Default: 1200
 	# Range: 0 ~ 9223372036854775807
-	energyUsageFlame = 1200
+	energyUsageFlame = 1220
 
 #Settings for configuring Energy Tablets
 [energy_tablet]
@@ -74,7 +74,7 @@
 	#Capacity in mB of gauge droppers.
 	# Default: 16000
 	# Range: > 1
-	capacity = 16000
+	capacity = 32000
 	#Rate in mB/t at which a gauge dropper can be filled or emptied.
 	# Default: 250
 	# Range: > 1
@@ -89,7 +89,7 @@
 	#Rate in mB/t at which a Flamethrower's tank can accept hydrogen.
 	# Default: 16
 	# Range: 1 ~ 9223372036854775807
-	fillRate = 16
+	fillRate = 24
 	#Determines whether or not the Flamethrower can destroy item entities the flame hits if it fails to smelt them.
 	destroyItems = true
 
@@ -102,11 +102,11 @@
 	#Amount (joules) of energy the Free Runners can accept per tick.
 	# Default: 320
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 320
+	chargeRate = 420
 	#Energy cost multiplier in Joules for reducing fall damage with free runners. Energy cost is: FallDamage * fallEnergyCost. (1 FallDamage is 1 half heart)
 	# Default: 50
 	# Range: 0 ~ 9223372036854775807
-	fallEnergyCost = 50
+	fallEnergyCost = 75
 	#Percent of damage taken from falling that can be absorbed by Free Runners when they have enough power.
 	# Default: 1.0
 	# Range: 0.0 ~ 1.0
@@ -117,11 +117,11 @@
 	#Jetpack tank capacity in mB.
 	# Default: 24000
 	# Range: 1 ~ 9223372036854775807
-	capacity = 24000
+	capacity = 28000
 	#Rate in mB/t at which a Jetpack's tank can accept hydrogen.
 	# Default: 16
 	# Range: 1 ~ 9223372036854775807
-	fillRate = 16
+	fillRate = 32
 
 #Settings for configuring Network Readers
 [network_reader]
@@ -143,26 +143,26 @@
 	#Maximum amount (joules) of energy the Portable Teleporter can contain.
 	# Default: 1000000
 	# Range: 0 ~ 9223372036854775807
-	maxEnergy = 1000000
+	maxEnergy = 1250000
 	#Amount (joules) of energy the Portable Teleporter can accept per tick.
 	# Default: 5000
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 5000
+	chargeRate = 6666
 	#Delay in ticks before a player is teleported after clicking the Teleport button in the portable teleporter.
 	# Default: 0
 	# Range: 0 ~ 6000
-	delay = 0
+	delay = 4
 
 #Settings for configuring Scuba Tanks
 [scuba_tank]
 	#Scuba Tank capacity in mB.
 	# Default: 24000
 	# Range: 1 ~ 9223372036854775807
-	capacity = 24000
+	capacity = 28000
 	#Rate in mB/t at which a Scuba Tank can accept oxygen.
 	# Default: 16
 	# Range: 1 ~ 9223372036854775807
-	fillRate = 16
+	fillRate = 24
 
 #Settings for configuring Seismic Readers
 [seismic_reader]
@@ -173,33 +173,33 @@
 	#Amount (joules) of energy the Seismic Reader can accept per tick.
 	# Default: 60
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 60
+	chargeRate = 64
 	#Energy usage in joules required to use the Seismic Reader.
 	# Default: 250
 	# Range: 0 ~ 9223372036854775807
-	energyUsage = 250
+	energyUsage = 242
 
 #Settings for configuring Canteens
 [canteen]
 	#Maximum amount in mB of Nutritional Paste storable by the Canteen.
 	# Default: 64000
 	# Range: > 1
-	maxStorage = 64000
+	maxStorage = 69000
 	#Rate in mB/t at which Nutritional Paste can be transferred into a Canteen.
 	# Default: 128
 	# Range: > 1
-	transferRate = 128
+	transferRate = 148
 
 #Settings for configuring the Meka-Tool
 [mekatool]
 	#Energy capacity (Joules) of the Meka-Tool without any installed upgrades. Quadratically scaled by upgrades.
 	# Default: 16000000
 	# Range: 0 ~ 9223372036854775807
-	baseEnergyCapacity = 16000000
+	baseEnergyCapacity = 32000000
 	#Amount (joules) of energy the Meka-Tool can accept per tick. Quadratically scaled by upgrades.
 	# Default: 100000
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 100000
+	chargeRate = 320000
 	#Base bonus damage applied by the Meka-Tool without using any energy.
 	# Default: 4
 	# Range: 0 ~ 100000
@@ -217,14 +217,14 @@
 	#Maximum distance a player can teleport with the Meka-Tool.
 	# Default: 100
 	# Range: 3 ~ 1024
-	maxTeleportReach = 100
+	maxTeleportReach = 125
 
 	#Settings for configuring the Meka-Tool's Energy Usage
 	[mekatool.energy_usage]
 		#Base energy (Joules) usage of the Meka-Tool. (Gets multiplied by speed factor)
 		# Default: 10
 		# Range: 0 ~ 9223372036854775807
-		base = 10
+		base = 12
 		#Silk touch energy (Joules) usage of the Meka-Tool. (Gets multiplied by speed factor)
 		# Default: 100
 		# Range: 0 ~ 9223372036854775807
@@ -263,37 +263,37 @@
 	#Energy capacity (Joules) of MekaSuit items without any installed upgrades. Quadratically scaled by upgrades.
 	# Default: 16000000
 	# Range: 0 ~ 9223372036854775807
-	baseEnergyCapacity = 16000000
+	baseEnergyCapacity = 32000000
 	#Amount (joules) of energy the MekaSuit can accept per tick. Quadratically scaled by upgrades.
 	# Default: 100000
 	# Range: 0 ~ 9223372036854775807
-	chargeRate = 100000
+	chargeRate = 250000
 	#Charge rate of inventory items in Joules/t when charging the player's inventory with the Charge Distribution Unit.
 	# Default: 10000
 	# Range: 0 ~ 9223372036854775807
-	inventoryChargeRate = 10000
+	inventoryChargeRate = 20000
 	#Solar recharging rate in Joules/t of the helmet, per upgrade installed.
 	# Default: 500
 	# Range: 0 ~ 9223372036854775807
-	solarRechargingRate = 500
+	solarRechargingRate = 562
 	#Should the Gravitational Modulation unit give off vibrations that can be detected by Sculk Sensors and Shriekers when in use.
 	gravitationalVibrations = true
 	#Maximum amount in mB of Nutritional Paste storable by the nutritional injection unit.
 	# Default: 128000
 	# Range: > 1
-	nutritionalMaxStorage = 128000
+	nutritionalMaxStorage = 256000
 	#Rate in mB/t at which Nutritional Paste can be transferred into the nutritional injection unit.
 	# Default: 256
 	# Range: > 1
-	nutritionalTransferRate = 256
+	nutritionalTransferRate = 512
 	#Maximum amount in mB of Hydrogen storable per installed jetpack unit.
 	# Default: 24000
 	# Range: 1 ~ 9223372036854775807
-	jetpackMaxStorage = 24000
+	jetpackMaxStorage = 48000
 	#Rate in mB/t at which Hydrogen can be transferred into the jetpack unit.
 	# Default: 256
 	# Range: 1 ~ 9223372036854775807
-	jetpackTransferRate = 256
+	jetpackTransferRate = 512
 
 	#Settings for configuring the MekaSuit's Energy Usage
 	[mekasuit.energy_usage]
@@ -316,7 +316,7 @@
 		#Energy usage (Joules) per second of the MekaSuit when flying with the Elytra Unit.
 		# Default: 32000
 		# Range: 0 ~ 9223372036854775807
-		elytra = 32000
+		elytra = 30000
 		#Energy usage (Joules) of MekaSuit when lessening a potion effect.
 		# Default: 40000
 		# Range: 0 ~ 9223372036854775807

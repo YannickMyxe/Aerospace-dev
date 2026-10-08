@@ -36,21 +36,21 @@
 	#Amount of energy in Joules the Heat Generator produces per tick. heatGeneration + heatGenerationLava * lavaSides + heatGenerationNether. Note: lavaSides is how many sides are adjacent to lava, this includes the block itself if it is lava logged allowing for a max of 7 "sides".
 	# Default: 200
 	# Range: 0 ~ 9223372036854775807
-	heatGeneration = 200
+	heatGeneration = 400
 	#Multiplier of effectiveness of Lava that is adjacent to the Heat Generator.
 	# Default: 30
 	# Range: 0 ~ 1317624576693539401
-	heatGenerationLava = 30
+	heatGenerationLava = 32
 	#Add this amount of Joules to the energy produced by a heat generator if it is in an 'ultrawarm' dimension, in vanilla this is just the Nether.
 	# Default: 100
 	# Range: 0 ~ 9223372036854775807
-	heatGenerationNether = 100
+	heatGenerationNether = 250
 	#The capacity in mB of the fluid tank in the Heat Generator.
 	# Default: 24000
 	# Range: > 1
 	tankCapacity = 24000
 	#The amount of lava in mB that gets consumed to transfer heatGeneration Joules to the Heat Generator.
-	heatGenerationFluidRate = 10
+	heatGenerationFluidRate = 12
 
 #Settings for configuring Gas-Burning Generators
 [gas_generator]
@@ -64,15 +64,15 @@
 	#Minimum energy generation in Joules/t that the Wind Generator can produce.
 	# Default: 60
 	# Range: 0 ~ 9223372036854775807
-	generationMin = 60
+	generationMin = 64
 	#Maximum energy generation in Joules/t that the Wind Generator can produce.
 	# Default: 480
 	# Range: 0 ~ 9223372036854775807
-	generationMax = 480
+	generationMax = 6400
 	#The minimum Y value that affects the Wind Generators Power generation. This value gets clamped at the world's minimum height.
 	# Default: 24
 	# Range: -2032 ~ 2030
-	minY = 24
+	minY = 16
 	#The maximum Y value that affects the Wind Generators Power generation. This value gets clamped at the world's logical height. For example for worlds like the nether that are 256 blocks tall, but have a ceiling at 128 blocks, this would be clamped at 128.
 	maxY = 2031
 

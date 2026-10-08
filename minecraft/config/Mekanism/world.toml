@@ -110,11 +110,11 @@ userWorldGenVersion = 0
 		#Chance that Upper Osmium Veins generates in a chunk.
 		# Default: 65
 		# Range: 1 ~ 256
-		perChunk = 65
+		perChunk = 82
 		#Maximum number of blocks in a Upper Osmium Vein.
 		# Default: 7
 		# Range: 1 ~ 64
-		maxVeinSize = 7
+		maxVeinSize = 9
 		#Chance that blocks that are directly exposed to air in a Upper Osmium Vein are not placed.
 		# Default: 0.0
 		# Range: 0.0 ~ 1.0
@@ -134,7 +134,7 @@ userWorldGenVersion = 0
 			#Allowed Values: ABSOLUTE, ABOVE_BOTTOM, BELOW_TOP
 			type = "ABSOLUTE"
 			#Value used for calculating the y-level for the anchor based on the type.
-			value = 72
+			value = 128
 
 		#Maximum (inclusive) height anchor for Upper Osmium Veins. This defines the maximum y-level that Upper Osmium Veins can spawn at.
 		[osmium.upper.maxInclusive]
@@ -154,11 +154,11 @@ userWorldGenVersion = 0
 		#Chance that Middle Osmium Veins generates in a chunk.
 		# Default: 6
 		# Range: 1 ~ 256
-		perChunk = 6
+		perChunk = 8
 		#Maximum number of blocks in a Middle Osmium Vein.
 		# Default: 9
 		# Range: 1 ~ 64
-		maxVeinSize = 9
+		maxVeinSize = 16
 		#Chance that blocks that are directly exposed to air in a Middle Osmium Vein are not placed.
 		# Default: 0.0
 		# Range: 0.0 ~ 1.0
@@ -198,11 +198,11 @@ userWorldGenVersion = 0
 		#Chance that Small Osmium Veins generates in a chunk.
 		# Default: 8
 		# Range: 1 ~ 256
-		perChunk = 8
+		perChunk = 12
 		#Maximum number of blocks in a Small Osmium Vein.
 		# Default: 4
 		# Range: 1 ~ 64
-		maxVeinSize = 4
+		maxVeinSize = 8
 		#Chance that blocks that are directly exposed to air in a Small Osmium Vein are not placed.
 		# Default: 0.0
 		# Range: 0.0 ~ 1.0
@@ -247,11 +247,11 @@ userWorldGenVersion = 0
 		#Chance that Small Uranium Veins generates in a chunk.
 		# Default: 4
 		# Range: 1 ~ 256
-		perChunk = 4
+		perChunk = 6
 		#Maximum number of blocks in a Small Uranium Vein.
 		# Default: 4
 		# Range: 1 ~ 64
-		maxVeinSize = 4
+		maxVeinSize = 6
 		#Chance that blocks that are directly exposed to air in a Small Uranium Vein are not placed.
 		# Default: 0.0
 		# Range: 0.0 ~ 1.0
@@ -291,11 +291,11 @@ userWorldGenVersion = 0
 		#Chance that Buried Uranium Veins generates in a chunk.
 		# Default: 7
 		# Range: 1 ~ 256
-		perChunk = 7
+		perChunk = 8
 		#Maximum number of blocks in a Buried Uranium Vein.
 		# Default: 9
 		# Range: 1 ~ 64
-		maxVeinSize = 9
+		maxVeinSize = 16
 		#Chance that blocks that are directly exposed to air in a Buried Uranium Vein are not placed.
 		# Default: 0.75
 		# Range: 0.0 ~ 1.0
@@ -340,11 +340,11 @@ userWorldGenVersion = 0
 		#Chance that Normal Fluorite Veins generates in a chunk.
 		# Default: 5
 		# Range: 1 ~ 256
-		perChunk = 5
+		perChunk = 8
 		#Maximum number of blocks in a Normal Fluorite Vein.
 		# Default: 5
 		# Range: 1 ~ 64
-		maxVeinSize = 5
+		maxVeinSize = 12
 		#Chance that blocks that are directly exposed to air in a Normal Fluorite Vein are not placed.
 		# Default: 0.0
 		# Range: 0.0 ~ 1.0
@@ -388,7 +388,7 @@ userWorldGenVersion = 0
 		#Maximum number of blocks in a Buried Fluorite Vein.
 		# Default: 13
 		# Range: 1 ~ 64
-		maxVeinSize = 13
+		maxVeinSize = 15
 		#Chance that blocks that are directly exposed to air in a Buried Fluorite Vein are not placed.
 		# Default: 1.0
 		# Range: 0.0 ~ 1.0
@@ -437,11 +437,11 @@ userWorldGenVersion = 0
 		#Maximum number of blocks in a Normal Lead Vein.
 		# Default: 9
 		# Range: 1 ~ 64
-		maxVeinSize = 9
+		maxVeinSize = 12
 		#Chance that blocks that are directly exposed to air in a Normal Lead Vein are not placed.
 		# Default: 0.25
 		# Range: 0.0 ~ 1.0
-		discardChanceOnAirExposure = 0.25
+		discardChanceOnAirExposure = 0.20
 		#Distribution shape for placing Normal Lead Veins.
 		#Allowed Values: TRAPEZOID, UNIFORM
 		shape = "TRAPEZOID"

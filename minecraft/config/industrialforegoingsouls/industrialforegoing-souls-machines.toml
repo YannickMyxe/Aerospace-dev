@@ -2,7 +2,7 @@
 	#How many souls each pipe can hold
 	# Default: 4
 	# Range: > 0
-	SOUL_AMOUNT_PER_PIPE = 4
+	SOUL_AMOUNT_PER_PIPE = 8
 
 	[IFSoulsMachines.ConfigSoulLaserBase]
 		#Max soul storage tank amount
@@ -28,20 +28,20 @@
 		#How long in ticks a soul last to accelerate ticks
 		# Default: 300
 		# Range: > 1
-		SOUL_TIME = 300
+		SOUL_TIME = 360
 		#How many extra ticks the surge will accelerate for tile entities
 		# Default: 4
 		# Range: > 0
-		ACCELERATION_TICK = 4
+		ACCELERATION_TICK = 6
 		#How many extra ticks the surge will accelerate for mobs
 		# Default: 4
 		# Range: > 0
-		ENTITIES_ACCELERATION_TICK = 4
+		ENTITIES_ACCELERATION_TICK = 6
 		#How many extra ticks the surge will accelerate for blocks
 		# Default: 4
 		# Range: > 0
-		BLOCK_ACCELERATION_TICK = 4
+		BLOCK_ACCELERATION_TICK = 6
 		#How often a random tick block will be accelerated, by default 3% of the ticks (random)
 		# Default: 0.03
 		# Range: 0.0 ~ 1.0
-		RANDOM_TICK_ACCELERATION_CHANCE = 0.03
+		RANDOM_TICK_ACCELERATION_CHANCE = 0.0569420
