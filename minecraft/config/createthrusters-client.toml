@@ -31,6 +31,10 @@
 	usePlumeMetaballRendering = true
 	#Plumes emit light into the surrounding world
 	plumesEmitLight = false
+	#Minimum updates per second for each visible ACC Display or CCTV camera feed. Actual FPS is limited by your computer's frame rate.
+	# Default: 10
+	# Range: 1 ~ 60
+	cameraMinimumRefreshRate = 10
 
 	#Seasonal visual effects
 	[client.seasonal]

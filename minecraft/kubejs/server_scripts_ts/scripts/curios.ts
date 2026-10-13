@@ -17,7 +17,8 @@ ServerEvents.tags("item", event => {
 
     const createGoggles: Item = "create:goggles";
     const thrustersGoggles: Item = "createthrusters:physics_goggles";
-    addItemsToSlot(event, faceSlot, [createGoggles, thrustersGoggles]);
+    const advanced_per_goggles = itemTag('#advancedperipherals:smart_glasses')
+    addItemsToSlot(event, faceSlot, [createGoggles, thrustersGoggles, advanced_per_goggles]);
 
     const conductorCaps = itemTag("#railways:conductor_caps");
     const aviatorGoggles: Item = "aeronautics:aviators_goggles";

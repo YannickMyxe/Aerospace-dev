@@ -25,7 +25,8 @@
     event.add("elytraslot:elytra", estrogenElytra);
     const createGoggles = "create:goggles";
     const thrustersGoggles = "createthrusters:physics_goggles";
-    addItemsToSlot(event, faceSlot, [createGoggles, thrustersGoggles]);
+    const advanced_per_goggles = itemTag("#advancedperipherals:smart_glasses");
+    addItemsToSlot(event, faceSlot, [createGoggles, thrustersGoggles, advanced_per_goggles]);
     const conductorCaps = itemTag("#railways:conductor_caps");
     const aviatorGoggles = "aeronautics:aviators_goggles";
     const mekanismScubaMask = "mekanism:scuba_mask";

@@ -52,7 +52,7 @@
 	#Define the maximum speed boost of the Flight Card.
 	# Default: 10
 	# Range: 1 ~ 15
-	quantumArmorMaxFlightSpeed = 18
+	quantumArmorMaxFlightSpeed = 15
 	#Define the evasion % chance of the evasion card.
 	# Default: 30
 	# Range: 0 ~ 100
@@ -60,7 +60,7 @@
 	#Define the max range of the magnet card.
 	# Default: 12
 	# Range: 5 ~ 15
-	quantumArmorMagnetRange = 16
+	quantumArmorMagnetRange = 15
 	#Define the Attack Damage boost of the Strength Card.
 	# Default: 10
 	# Range: 5 ~ 50

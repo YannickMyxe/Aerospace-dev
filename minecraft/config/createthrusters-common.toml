@@ -183,7 +183,7 @@
 
 	#App Ownership and persistance
 	[common.diagnostic_tablet]
-		#Enable the Smart Tablet block, item, user interface, apps and networking
+		#Legacy startup fallback for the Smart Tablet. The server.features.blocks.diagnostic_tablet setting takes precedence.
 		enabled = false
 		#Who owns the paid apps, PLAYER is shared across tablets, DEVICE is not.
 		#Allowed Values: PLAYER, DEVICE
@@ -195,3 +195,8 @@
 		# Default: 215.0
 		# Range: 0.0 ~ 100000.0
 		rcsThrusterMaxThrust = 215.0
+
+	#Flight Control graph integration
+	[common.flight_control]
+		#Easy Flight control integration. Allow control nodes without dedicated Flight Control blocks. A Creative Flight Control Computer on the sublevel also enables this. Its node always requires the physical block. Existing blocks synchronize with their nodes in either mode. The HUD node is always available.
+		easyFlightControlIntegration = false

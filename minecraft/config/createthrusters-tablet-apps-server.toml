@@ -21,6 +21,10 @@
 	# Default: 100
 	# Range: 20 ~ 12000
 	operationCooldownTicks = 100
+	allowSchematics = true
+	# Default: 100
+	# Range: 20 ~ 1200
+	schematicBuildTicks = 100
 
 [manifest]
 	# Default: 64

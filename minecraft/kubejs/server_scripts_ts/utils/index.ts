@@ -1,14 +1,32 @@
 export type Item = KubeJSItemId;
 export type ItemTag = `#${import("@special/types").RegistryTypes.ItemTag}`;
+export type ItemStack = `${number}x ${string}`;
 export type ItemIngredient = ReturnType<typeof Ingredient.of>;
+type SizedItemIngredient = ReturnType<ItemIngredient["withCount"]>;
+type FluidStack = ReturnType<typeof Fluid.of>;
+type FluidIngredient = ReturnType<typeof Fluid.ingredientOf>;
+type CreateMixingInput = ItemIngredient | SizedItemIngredient | FluidStack | FluidIngredient;
 
 type ItemOrTag = Item | ItemTag;
+
+type CreateProcessingRecipe = {
+    processingTime(ticks: number): unknown;
+};
+
+type CreateMixingRecipe = CreateProcessingRecipe & {
+    heated(): CreateMixingRecipe;
+    superheated(): CreateMixingRecipe;
+};
 
 export type CreateRecipeApi = {
     cutting(
         results: string | unknown[],
         ingredient: ItemIngredient
-    ): { processingTime(ticks: number): unknown };
+    ): CreateProcessingRecipe;
+    mixing(
+        results: string | unknown[],
+        ingredient: CreateMixingInput | CreateMixingInput[]
+    ): CreateMixingRecipe;
 };
 
 export type MekanismRecipeApi = {
@@ -29,7 +47,7 @@ type ShapelessRecipeApi = {
     ): unknown;
 }
 
-export const multiple = (item: Item, amount: number): string => `${amount}x ${item}`;
+export const multiple = (item: Item, amount: number): ItemStack => `${amount}x ${item}`;
 
 export const itemTag = (id: string): ItemTag => {
     return id.startsWith('#') ? `${id}` as ItemTag : `#${id}` as ItemTag;
@@ -75,4 +93,8 @@ export const addItemsToSlot = (
     for (const item of items) {
         tagEvent.add(slot, item);
     }
+};
+
+export const toItem = (item: string): Item => {
+    return item as Item;
 };

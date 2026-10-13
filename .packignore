@@ -1,3 +1,4 @@
+.git
 minecraft/.github
 minecraft/.probe
 minecraft/.vscode
@@ -7,6 +8,7 @@ minecraft/audio_providers
 minecraft/command_history.txt
 minecraft/debug
 minecraft/downloads
+minecraft/kubejs/server_scripts_ts
 minecraft/options.txt
 minecraft/saves
 minecraft/schematics

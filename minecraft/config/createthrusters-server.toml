@@ -125,6 +125,8 @@
 			ratchet_cogwheel = true
 			#Allow large ratchet cogwheel on this server. Existing content is not removed automatically.
 			large_ratchet_cogwheel = true
+			#Allow diagnostic tablet on this server. Existing content is not removed automatically.
+			diagnostic_tablet = false
 
 		[server.features.items]
 			#Allow blackstone alloy on this server. Existing content is not removed automatically.
