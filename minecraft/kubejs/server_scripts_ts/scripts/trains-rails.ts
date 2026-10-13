@@ -1,13 +1,10 @@
-import {Item, itemTag, multiple, shapedSurround} from "../utils";
+import {shapeless, toItem, type Item} from "../utils";
 
 
 ServerEvents.recipes(event => {
-    const p1: Item = 'pantographsandwires:pantograph';
-    const p2: Item = 'moderntrainparts:pantograph';
+    const p1: Item = toItem('pantographsandwires:pantograph');
+    const p2: Item = toItem('moderntrainparts:pantograph');
 
-    event.shapeless(p1, [p2,]);
-    event.shapeless(p2, [p1,]);
-
+    shapeless(event, p1, p2);
+    shapeless(event, p2, p1);
 });
-
-
