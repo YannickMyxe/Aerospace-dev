@@ -1,15 +1,20 @@
 import {
     toKubeJSString,
+    toKubeJSFluidStack,
     type ItemIngredient,
     type ItemOrTag,
-    type ItemStack
+    type ItemStack,
+    type FluidStack as CustomFluidStack,
+    isItemWrapper,
+    isFluidStack,
 } from "./types";
 
 type SizedItemIngredient = ReturnType<ItemIngredient["withCount"]>;
-type FluidStack = ReturnType<typeof Fluid.of>;
+type NativeFluidStack = ReturnType<typeof Fluid.of>;
+type FillingFluid = NativeFluidStack | CustomFluidStack;
 type FluidIngredient = ReturnType<typeof Fluid.ingredientOf>;
 type SizedFluidIngredient = ReturnType<typeof Fluid.sizedIngredientOf>;
-type CreateMixingInput = ItemIngredient | SizedItemIngredient | FluidStack | FluidIngredient | SizedFluidIngredient | ItemStack | ItemOrTag;
+type CreateMixingInput = ItemIngredient | SizedItemIngredient | NativeFluidStack | FluidIngredient | SizedFluidIngredient | ItemStack | ItemOrTag;
 type CreateOutput = string | ItemOrTag | ItemStack | unknown[];
 
 export type CreateProcessingRecipe = {
@@ -21,6 +26,8 @@ export type CreateMixingRecipe = CreateProcessingRecipe & {
     superheated(): CreateMixingRecipe;
 };
 
+export type CreateFillingRecipe = CreateProcessingRecipe;
+
 export type CreateRecipeApi = {
     cutting(
         results: CreateOutput,
@@ -30,19 +37,17 @@ export type CreateRecipeApi = {
         results: CreateOutput,
         ingredient: CreateMixingInput | CreateMixingInput[]
     ): CreateMixingRecipe;
+    filling(
+        results: CreateOutput,
+        fluid: FillingFluid,
+        ingredient: ItemIngredient | ItemOrTag | ItemStack,
+    ): CreateFillingRecipe;
 };
 
 type RawCreateRecipeApi = {
     cutting(results: unknown, ingredient: unknown): CreateProcessingRecipe;
     mixing(results: unknown, ingredient: unknown): CreateMixingRecipe;
-};
-
-const isItemWrapper = (value: unknown): value is ItemOrTag => {
-    if (value === null || typeof value !== "object") return false;
-    const item = value as Partial<ItemOrTag>;
-    return typeof item.toString === "function" &&
-        (typeof (item as { item?: unknown }).item === "string" ||
-            typeof (item as { tag?: unknown }).tag === "string");
+    filling(results: unknown, ingredients: unknown): CreateFillingRecipe;
 };
 
 const serializeOutput = (value: unknown): unknown => {
@@ -88,6 +93,14 @@ export const createRecipeApi = (recipes: unknown): CreateRecipeApi => {
                 Array.isArray(ingredients)
                     ? ingredients.map(serializeInput)
                     : serializeInput(ingredients)
-            )
+            ),
+        filling: (results, fluid, ingredient) =>
+            api.filling(
+                serializeOutputs(results),
+                [
+                    isFluidStack(fluid) ? toKubeJSFluidStack(fluid) : fluid,
+                    serializeInput(ingredient)
+                ]
+            ),
     };
 };

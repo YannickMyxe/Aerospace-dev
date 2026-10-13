@@ -3,6 +3,7 @@
   function toKubeJSString(value) {
     return value.toString();
   }
+  var kubeJSFluidFactory = Fluid.of;
   var itemToStack = (item, amount) => {
     if (!Number.isInteger(amount) || amount < 1) {
       throw new RangeError(`Item stack amount must be a positive integer; received ${amount}`);

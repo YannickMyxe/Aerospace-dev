@@ -14,6 +14,8 @@
       "@package/*": ["../../.probe/@package/*"],
       "@side-only/server": ["../../.probe/@side-only/server"],
       "@side-only/server/*": ["../../.probe/@side-only/server/*"],
+      "@side-only/startup": ["../../.probe/@side-only/startup"],
+      "@side-only/startup/*": ["../../.probe/@side-only/startup/*"],
       "@special": ["../../.probe/@special"],
       "@special/*": ["../../.probe/@special/*"]
     },
@@ -29,6 +31,7 @@
   "include": [
     "./**/*.ts",
     "../../.probe/@side-only/server/**/*.d.ts",
+    "../../.probe/@side-only/startup/**/*.d.ts",
     "../../.probe/@special/**/*.d.ts"
   ],
   "exclude": ["node_modules"]

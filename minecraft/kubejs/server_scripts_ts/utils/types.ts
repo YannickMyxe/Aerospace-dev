@@ -18,6 +18,18 @@ export interface ItemStack {
     toString(): ItemStackString;
 }
 
+export interface Fluid {
+    readonly fluid: string;
+    toString(): string;
+    stack(amount: number): FluidStack;
+}
+
+export interface FluidStack {
+    fluid: Fluid;
+    amount: number;
+    toString(): string;
+}
+
 export type ItemStackString = `${number}x ${string}`;
 export type ItemIngredient = ReturnType<typeof Ingredient.of>;
 export type CountedIngredient<TIngredient> = {
@@ -33,6 +45,33 @@ export function toKubeJSString(value: ItemOrTag | ItemStack): string;
 export function toKubeJSString(value: ItemOrTag | ItemStack): string {
     return value.toString();
 }
+
+export const fluidToStack = (fluid: Fluid, amount: number): FluidStack => {
+    if (!Number.isInteger(amount) || amount < 1) {
+        throw new RangeError(`Fluid amount must be a positive integer; received ${amount}`);
+    }
+
+    return {
+        fluid,
+        amount,
+        toString: () => `${amount}mB ${fluid.fluid}`
+    };
+};
+
+export const toFluid = (id: string): Fluid => {
+    const fluid: Fluid = {
+        fluid: id,
+        toString: () => id,
+        stack: amount => fluidToStack(fluid, amount),
+    };
+    return fluid;
+};
+
+type KubeJSFluidFactory = (id: string, amount: number) => ReturnType<typeof Fluid.water>;
+const kubeJSFluidFactory = Fluid.of as unknown as KubeJSFluidFactory;
+
+export const toKubeJSFluidStack = (stack: FluidStack): ReturnType<typeof Fluid.water> =>
+    kubeJSFluidFactory(stack.fluid.fluid, stack.amount);
 
 export const itemToStack = (item: ItemOrTag, amount: number): ItemStack => {
     if (!Number.isInteger(amount) || amount < 1) {
@@ -68,13 +107,27 @@ type ShapelessRecipeEventApi = {
     shapeless(output: string, ingredients: unknown[]): unknown;
 };
 
-const isItemWrapper = (value: unknown): value is ItemOrTag => {
+export const isItemWrapper = (value: unknown): value is ItemOrTag => {
     if (value === null || typeof value !== "object") return false;
     const item = value as Partial<ItemOrTag>;
     return typeof item.toString === "function" &&
         (typeof (item as { item?: unknown }).item === "string" ||
             typeof (item as { tag?: unknown }).tag === "string");
 };
+
+export const isFluidWrapper = (value: unknown): value is Fluid => {
+    if (value === null || typeof value !== "object") return false;
+    const fluid = value as { fluid?: unknown; stack?: unknown };
+    return typeof fluid.fluid === "string" && typeof fluid.stack === "function";
+};
+
+export const isFluidStack = (value: unknown): value is FluidStack =>
+    value !== null &&
+    typeof value === "object" &&
+    "amount" in value &&
+    typeof value.amount === "number" &&
+    "fluid" in value &&
+    isFluidWrapper(value.fluid);
 
 const isItemStack = (value: unknown): value is ItemStack =>
     value !== null &&
@@ -147,4 +200,27 @@ export const shapeless = (
 
 export type ItemTagEventApi = {
     add(tag: string, item: Item["item"] | ItemTag["tag"]): unknown;
+};
+
+type RecipeRemovalEvent = {
+    remove(filter: { output: string }): void;
+};
+
+export const removeRecipesByOutput = (
+    event: unknown,
+    outputs: Item | ItemStack | (Item | ItemStack)[]
+): void => {
+    const recipeEvent = event as RecipeRemovalEvent;
+    const outputList = Array.isArray(outputs) ? outputs : [outputs];
+    const outputIds = new Set(outputList.map(output => {
+        const item = "amount" in output ? output.item : output;
+        if ("tag" in item) {
+            throw new TypeError("Recipes can only be removed by item output, not an item tag");
+        }
+        return toKubeJSString(item);
+    }));
+
+    for (const output of outputIds) {
+        recipeEvent.remove({output});
+    }
 };

@@ -4,8 +4,8 @@ import * as esbuild from "esbuild";
 
 const sourceDirectory = import.meta.dirname;
 const scriptsDirectory = resolve(sourceDirectory, "scripts");
-const outputDirectory = resolve(sourceDirectory, "../server_scripts/compiled");
-const getEntryPoints = (directory = scriptsDirectory) =>
+const startupScriptsDirectory = resolve(sourceDirectory, "startup");
+const getEntryPoints = directory =>
     readdirSync(directory, { withFileTypes: true })
         .flatMap(entry => {
             const path = join(directory, entry.name);
@@ -16,10 +16,25 @@ const getEntryPoints = (directory = scriptsDirectory) =>
         })
         .sort();
 
-const getBuildOptions = () => {
-    const entryPoints = getEntryPoints();
+const targets = [
+    {
+        name: "server",
+        sourceFolder: "scripts",
+        sourceDirectory: scriptsDirectory,
+        outputDirectory: resolve(sourceDirectory, "../server_scripts/compiled")
+    },
+    {
+        name: "startup",
+        sourceFolder: "startup",
+        sourceDirectory: startupScriptsDirectory,
+        outputDirectory: resolve(sourceDirectory, "../startup_scripts/compiled")
+    }
+];
+
+const getBuildOptions = target => {
+    const entryPoints = getEntryPoints(target.sourceDirectory);
     if (entryPoints.length === 0) {
-        throw new Error(`No TypeScript script entry points found in ${scriptsDirectory}`);
+        throw new Error(`No TypeScript script entry points found in ${target.sourceDirectory}`);
     }
 
     return {
@@ -28,30 +43,34 @@ const getBuildOptions = () => {
         format: "iife",
         platform: "neutral",
         target: "es2022",
-        outdir: outputDirectory,
-        outbase: scriptsDirectory
+        outdir: target.outputDirectory,
+        outbase: target.sourceDirectory
     };
 };
 
 if (process.argv.includes("--watch")) {
-    let context = await esbuild.context(getBuildOptions());
-    await context.watch();
-    console.log(`Watching TypeScript scripts in ${scriptsDirectory}`);
+    const createContexts = async () => Promise.all(
+        targets.map(target => esbuild.context(getBuildOptions(target)))
+    );
+    let contexts = await createContexts();
+    await Promise.all(contexts.map(context => context.watch()));
+    console.log(`Watching TypeScript scripts in ${scriptsDirectory} and ${startupScriptsDirectory}`);
 
     let updateTimer;
     watchDirectory(sourceDirectory, { recursive: true }, (eventType, filename) => {
         if (eventType !== "rename" || filename === null) return;
-        const relativePath = relative(sourceDirectory, resolve(sourceDirectory, filename.toString()));
-        if (!relativePath.startsWith("scripts\\") && !relativePath.startsWith("scripts/")) return;
+        const relativePath = relative(sourceDirectory, resolve(sourceDirectory, filename.toString()))
+            .replace(/\\/g, "/");
+        if (!targets.some(target => relativePath.startsWith(`${target.sourceFolder}/`))) return;
         if (!relativePath.endsWith(".ts") || relativePath.endsWith(".d.ts")) return;
 
         clearTimeout(updateTimer);
         updateTimer = setTimeout(async () => {
-            await context.dispose();
-            context = await esbuild.context(getBuildOptions());
-            await context.watch();
+            await Promise.all(contexts.map(context => context.dispose()));
+            contexts = await createContexts();
+            await Promise.all(contexts.map(context => context.watch()));
         }, 100);
     });
 } else {
-    await esbuild.build(getBuildOptions());
+    await Promise.all(targets.map(target => esbuild.build(getBuildOptions(target))));
 }

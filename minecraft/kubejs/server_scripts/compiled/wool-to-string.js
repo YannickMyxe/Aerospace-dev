@@ -3,6 +3,8 @@
   function toKubeJSString(value) {
     return value.toString();
   }
+  var kubeJSFluidFactory = Fluid.of;
+  var toKubeJSFluidStack = (stack) => kubeJSFluidFactory(stack.fluid.fluid, stack.amount);
   var itemToStack = (item, amount) => {
     if (!Number.isInteger(amount) || amount < 1) {
       throw new RangeError(`Item stack amount must be a positive integer; received ${amount}`);
@@ -22,6 +24,17 @@
     };
     return itemValue;
   };
+  var isItemWrapper = (value) => {
+    if (value === null || typeof value !== "object") return false;
+    const item = value;
+    return typeof item.toString === "function" && (typeof item.item === "string" || typeof item.tag === "string");
+  };
+  var isFluidWrapper = (value) => {
+    if (value === null || typeof value !== "object") return false;
+    const fluid = value;
+    return typeof fluid.fluid === "string" && typeof fluid.stack === "function";
+  };
+  var isFluidStack = (value) => value !== null && typeof value === "object" && "amount" in value && typeof value.amount === "number" && "fluid" in value && isFluidWrapper(value.fluid);
   var multiple = (item, amount) => {
     return itemToStack(item, amount);
   };
@@ -36,11 +49,6 @@
   };
 
   // utils/Create.ts
-  var isItemWrapper = (value) => {
-    if (value === null || typeof value !== "object") return false;
-    const item = value;
-    return typeof item.toString === "function" && (typeof item.item === "string" || typeof item.tag === "string");
-  };
   var serializeOutput = (value) => {
     if (isItemWrapper(value)) return toKubeJSString(value);
     if (value !== null && typeof value === "object" && "amount" in value && isItemWrapper(value.item)) {
@@ -63,6 +71,13 @@
       mixing: (results, ingredients) => api.mixing(
         serializeOutputs(results),
         Array.isArray(ingredients) ? ingredients.map(serializeInput) : serializeInput(ingredients)
+      ),
+      filling: (results, fluid, ingredient) => api.filling(
+        serializeOutputs(results),
+        [
+          isFluidStack(fluid) ? toKubeJSFluidStack(fluid) : fluid,
+          serializeInput(ingredient)
+        ]
       )
     };
   };
