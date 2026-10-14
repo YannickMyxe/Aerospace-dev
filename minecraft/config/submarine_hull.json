@@ -61325,6 +61325,10 @@
     "maxWaterDepth": 37,
     "implosionChance": 0.52299964
   },
+  "supplementaries:grouper": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
   "supplementaries:gunpowder": {
     "maxWaterDepth": 15,
     "implosionChance": 0.6
@@ -61408,6 +61412,10 @@
   "supplementaries:pedestal": {
     "maxWaterDepth": 68,
     "implosionChance": 0.330409
+  },
+  "supplementaries:pignata_anchor": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
   },
   "supplementaries:planter": {
     "maxWaterDepth": 72,

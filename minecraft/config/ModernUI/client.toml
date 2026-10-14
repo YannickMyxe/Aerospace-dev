@@ -3,17 +3,17 @@
 	#The duration of GUI background color and blur radius animation in milliseconds. (0 = OFF)
 	# Default: 200
 	# Range: 0 ~ 800
-	animationDuration = 200
+	animationDuration = 155
 	#The GUI background color in #RRGGBB or #AARRGGBB format. Default value: #99000000
 	#Can be one to four values representing top left, top right, bottom right and bottom left color.
 	#Multiple values produce a gradient effect, whereas one value produce a solid color.
 	#When values is less than 4, the rest of the corner color will be replaced by the last value.
-	backgroundColor = ["#99000000"]
+	backgroundColor = ["#8C000000"]
 	#Add Gaussian blur effect to GUI background when opened.
 	#Disable this if you run into a problem or are on low-end PCs
 	blurEffect = true
 	#Whether to add blur effect to GUI screens that have a background and do not originate from Modern UI.
-	additionalBlurEffect = false
+	additionalBlurEffect = true
 	#Whether to replace Vanilla 3-pass box blur with Modern UI Gaussian blur.
 	#This gives you better quality and performance, recommend setting this to true.
 	overrideVanillaBlur = true
@@ -113,7 +113,7 @@
 	zoom = true
 	#Control the window mode, normal mode does nothing.
 	#Allowed Values: NORMAL, FULLSCREEN, FULLSCREEN_BORDERLESS, MAXIMIZED, MAXIMIZED_BORDERLESS, WINDOWED, WINDOWED_BORDERLESS
-	windowMode = "NORMAL"
+	windowMode = "MAXIMIZED"
 	#Whether to replace vanilla GUI scale button to slider with tips.
 	useNewGuiScale = true
 	#Remove telemetry event of client behaviors.
@@ -187,7 +187,7 @@
 #Font Config
 [font]
 	#The first font family to use. See fallbackFontFamilyList
-	firstFontFamily = "Inter Frozen Medium"
+	firstFontFamily = "JetBrains Mono Medium"
 	#A set of fallback font families to determine the typeface to use.
 	#The order is first > fallbacks. TrueType & OpenType are supported.
 	#Each element can be one of the following two cases:
@@ -208,7 +208,7 @@
 	#For example, "E:/Fonts" means all font files in that directory will be registered.
 	#System requires random access to these files, you should not remove them while running.
 	#This is only read once when the game is loaded, i.e. registration.
-	fontRegistrationList = []
+	fontRegistrationList = ["`"]
 	#Whether to use Google Noto Color Emoji, otherwise grayscale emoji (faster).
 	#See Unicode 15.0 specification for details on how this affects text layout.
 	useColorEmoji = true

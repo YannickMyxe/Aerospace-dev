@@ -222,3 +222,12 @@
 		# Default: 2
 		# Range: 1 ~ 4
 		shippingScheduleWorkSpreadTicks = 2
+		#Incomplete: enable SCM Ground/Sea vehicles and front-wheel, rear-wheel, four-wheel and tank steering. Disabled by default.
+		enableScmGroundSea = false
+		#Incomplete: enable SCM Plane vehicles. Disabled by default. Rudder steering remains available for airships.
+		enableScmPlane = false
+
+	#Advanced Contraption Controller chat delivery
+	[server.advanced_controller]
+		#Allow Send Chat Message nodes to broadcast nearby: the same sub-level, or a centered 3x3 chunk area in the main world. Private messages remain available when disabled. The legacy config key is retained so existing opt-outs keep working.
+		allowGlobalChatBroadcast = true
