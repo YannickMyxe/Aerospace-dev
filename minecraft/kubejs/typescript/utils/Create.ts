@@ -5,6 +5,8 @@ import {
     type ItemOrTag,
     type ItemStack,
     type FluidStack as CustomFluidStack,
+    isChancedItem,
+    type ChancedItem,
     isItemWrapper,
     isFluidStack,
 } from "./types";
@@ -15,7 +17,7 @@ type FillingFluid = NativeFluidStack | CustomFluidStack;
 type FluidIngredient = ReturnType<typeof Fluid.ingredientOf>;
 type SizedFluidIngredient = ReturnType<typeof Fluid.sizedIngredientOf>;
 type CreateMixingInput = ItemIngredient | SizedItemIngredient | NativeFluidStack | FluidIngredient | SizedFluidIngredient | ItemStack | ItemOrTag;
-type CreateOutput = string | ItemOrTag | ItemStack | unknown[];
+type CreateOutput = string | ItemOrTag | ItemStack | ChancedItem | unknown[];
 
 export type CreateProcessingRecipe = {
     processingTime(ticks: number): unknown;
@@ -63,6 +65,11 @@ type RawCreateRecipeApi = {
 };
 
 const serializeOutput = (value: unknown): unknown => {
+    if (isChancedItem(value)) {
+        const item = value as ChancedItem;
+        return CreateItem.of(item.item.toString(), item.chance)
+    }
+
     if (isItemWrapper(value)) return toKubeJSString(value);
 
     if (
@@ -118,3 +125,4 @@ export const createRecipeApi = (recipes: unknown): CreateRecipeApi => {
         milling: (results, ingredients) => api.milling(serializeOutputs(results), ingredients),
     };
 };
+

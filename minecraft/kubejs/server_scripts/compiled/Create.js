@@ -12,7 +12,13 @@
     return {
       item,
       amount,
-      toString: () => `${amount}x ${toKubeJSString(item)}`
+      toString: () => `${amount}x ${toKubeJSString(item)}`,
+      chance: (probability) => {
+        if ("tag" in item) {
+          throw new TypeError("Recipe outputs cannot be item tags");
+        }
+        return itemToChanced(item, amount, probability);
+      }
     };
   };
   var toItem = (id) => {
@@ -20,7 +26,8 @@
     const itemValue = {
       item,
       toString: () => item,
-      stack: (amount) => itemToStack(itemValue, amount)
+      stack: (amount) => itemToStack(itemValue, amount),
+      chance: (probability) => itemToChanced(itemValue, 1, probability)
     };
     return itemValue;
   };
@@ -44,9 +51,25 @@
     };
     return tagValue;
   };
+  var itemToChanced = (item, amount, chance) => {
+    if (chance <= 0 || chance > 1) {
+      throw new RangeError(`Chance must be between 0 (exclusive) and 1 (inclusive); received ${chance}`);
+    }
+    return {
+      item,
+      amount,
+      chance,
+      stack: (newAmount) => itemToChanced(item, newAmount, chance)
+    };
+  };
+  var isChancedItem = (value) => value !== null && typeof value === "object" && "chance" in value && typeof value.chance === "number" && "item" in value && isItemWrapper(value.item) && !("tag" in value.item);
 
   // utils/Create.ts
   var serializeOutput = (value) => {
+    if (isChancedItem(value)) {
+      const item = value;
+      return CreateItem.of(item.item.toString(), item.chance);
+    }
     if (isItemWrapper(value)) return toKubeJSString(value);
     if (value !== null && typeof value === "object" && "amount" in value && isItemWrapper(value.item)) {
       return toKubeJSString(value);

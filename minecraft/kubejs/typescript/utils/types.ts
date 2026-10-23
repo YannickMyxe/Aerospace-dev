@@ -2,6 +2,7 @@ export interface Item {
     readonly item: KubeJSItemId,
     toString(): KubeJSItemId;
     stack(amount: number): ItemStack;
+    chance(probability: number): ChancedItem;
 }
 
 export interface ItemTag {
@@ -10,12 +11,20 @@ export interface ItemTag {
     stack(amount: number): ItemStack;
 }
 
+export interface ChancedItem {
+    readonly item: Item;
+    readonly amount: number;
+    readonly chance: number;
+    stack(amount: number): ChancedItem;
+}
+
 export type ItemOrTag = Item | ItemTag;
 
 export interface ItemStack {
     item: ItemOrTag,
     amount: number;
     toString(): ItemStackString;
+    chance(probability: number): ChancedItem;
 }
 
 export interface Fluid {
@@ -81,7 +90,13 @@ export const itemToStack = (item: ItemOrTag, amount: number): ItemStack => {
     return {
         item,
         amount,
-        toString: () => `${amount}x ${toKubeJSString(item)}`
+        toString: () => `${amount}x ${toKubeJSString(item)}`,
+        chance: probability => {
+            if ("tag" in item) {
+                throw new TypeError("Recipe outputs cannot be item tags");
+            }
+            return itemToChanced(item, amount, probability);
+        }
     };
 }
 
@@ -91,6 +106,7 @@ export const toItem = (id: string): Item => {
         item,
         toString: () => item,
         stack: amount => itemToStack(itemValue, amount),
+        chance: probability => itemToChanced(itemValue, 1, probability),
     };
     return itemValue;
 };
@@ -224,3 +240,25 @@ export const removeRecipesByOutput = (
         recipeEvent.remove({output});
     }
 };
+
+export const itemToChanced = (item: Item, amount: number, chance: number): ChancedItem => {
+    if (chance <= 0 || chance > 1) {
+        throw new RangeError(`Chance must be between 0 (exclusive) and 1 (inclusive); received ${chance}`);
+    }
+
+    return {
+        item,
+        amount,
+        chance,
+        stack: (newAmount: number) => itemToChanced(item, newAmount, chance),
+    };
+};
+
+export const isChancedItem = (value: unknown): value is ChancedItem =>
+    value !== null &&
+    typeof value === "object" &&
+    "chance" in value &&
+    typeof (value as ChancedItem).chance === "number" &&
+    "item" in value &&
+    isItemWrapper((value as ChancedItem).item) &&
+    !("tag" in (value as ChancedItem).item);

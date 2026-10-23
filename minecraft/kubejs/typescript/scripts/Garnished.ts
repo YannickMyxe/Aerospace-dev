@@ -1,8 +1,5 @@
 import {createRecipeApi, Item, removeRecipesByOutput, toItem} from "../utils";
 
-
-
-
 ServerEvents.recipes(event => {
     const salt: Item = toItem('mekanism:salt');
     const saltBlock: Item = toItem('mekanism:block_salt');
