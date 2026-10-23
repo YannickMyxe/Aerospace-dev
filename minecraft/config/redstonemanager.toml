@@ -1,0 +1,8 @@
+#Redstone Manager Config
+[General]
+	#Whether empty groups should be deleted from the Redstone Manager
+	delete_empty_groups = false
+	#The radius to search for similar blocks when bulk linking. NOTE: each block requires a linker in inventory and larger range could cause lag when linking
+	# Default: 32
+	# Range: 1 ~ 256
+	bulk_search_radius = 32

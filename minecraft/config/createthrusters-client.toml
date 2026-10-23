@@ -31,10 +31,16 @@
 	usePlumeMetaballRendering = true
 	#Plumes emit light into the surrounding world
 	plumesEmitLight = false
-	#Minimum updates per second for each visible ACC Display or CCTV camera feed. Actual FPS is limited by your computer's frame rate.
+	#Target frames per second for each visible ACC Display or CCTV tablet camera feed. Actual FPS is limited by your computer's frame rate. Changes apply to active feeds.
 	# Default: 10
 	# Range: 1 ~ 60
 	cameraMinimumRefreshRate = 10
+	#Use the V2 node graph interface for Advanced Contraption Controllers
+	advancedControllerV2Ui = true
+	#Pixel resolution of the longest edge of ACC Display and CCTV tablet camera feeds. Aspect ratio is preserved. Higher values improve detail and use more GPU resources. Changes apply to active feeds.
+	# Default: 320
+	# Range: 64 ~ 2048
+	cameraFeedResolution = 320
 
 	#Seasonal visual effects
 	[client.seasonal]

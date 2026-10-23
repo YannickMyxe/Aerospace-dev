@@ -115,7 +115,8 @@
 		forceloadBonusForPartyOwner = 0
 		#Whether players should be able to claim chunks that are directly next to claimed chunks owned by another player/party.
 		#Disallowing it can prevent players from doing so without realizing that chunks next to claims can also be partially protected,
-		#e.g. from item use and mob griefing, making them not ideal for some purposes.
+		#e.g. from item use and mob griefing, making them not ideal for some purposes. Players can make exceptions using the "Can Claim Next To"
+		#option in their player config.
 		#Only affects claiming wilderness, so reclaimable claims can still work.
 		allowTouchingClaims = true
 		#How often (in minutes) to allow players to access a claim when their own claim count is over the claim limit or the claim count
@@ -235,6 +236,12 @@
 		#This might not work well with party-owned claims. The party owner would have to log in for any changes.
 		#The used permission system can be configured with "permissionSystem".
 		claimingAnchorRangePermission = "xaero.pac_claiming_anchor_range"
+		#The permission that is used to check whether claiming is paused for a player. Set it to an empty string to never check permissions.
+		#The used permission system can be configured with "permissionSystem".
+		claimingPausedPermission = "xaero.pac_claiming_paused"
+		#The permission that is used to check whether new forceloads are paused for a player. Set it to an empty string to never check permissions.
+		#The used permission system can be configured with "permissionSystem".
+		newForceloadsPausedPermission = "xaero.pac_new_forceloads_paused"
 
 		[serverConfig.claims.protection]
 			#The type of the list defined in "friendlyChunkProtectedEntityList". ONLY - include only the listed entities. ALL_BUT - include all but the listed entities.

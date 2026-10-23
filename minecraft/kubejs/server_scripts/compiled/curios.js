@@ -48,23 +48,24 @@
     const headSlot = "curios:head";
     const feetSlot = "curios:feet";
     const estrogenElytra = toItem("estrogen:moth_elytra");
-    const mekanismScubaTank = toItem("mekanism:scuba_tank");
-    const mekanismJetpack = toItem("mekanism:jetpack");
-    const jetpacks = itemTag("#create_sa:jetpack");
-    const pressureSources = itemTag("#create:pressurized_air_sources");
-    addItemsToSlot(event, backSlot, [estrogenElytra, mekanismScubaTank, jetpacks, mekanismJetpack, pressureSources]);
+    addItemsToSlot(event, backSlot, [
+      estrogenElytra,
+      toItem("mekanism:scuba_tank"),
+      toItem("mekanism:jetpack"),
+      itemTag("#create_sa:jetpack"),
+      itemTag("#create:pressurized_air_sources")
+    ]);
     addItemsToSlot(event, "elytraslot:elytra", estrogenElytra);
-    const createGoggles = toItem("create:goggles");
-    const thrustersGoggles = toItem("createthrusters:physics_goggles");
-    const advanced_per_goggles = itemTag("#advancedperipherals:smart_glasses");
-    addItemsToSlot(event, faceSlot, [createGoggles, thrustersGoggles, advanced_per_goggles]);
-    const conductorCaps = itemTag("#railways:conductor_caps");
-    const aviatorGoggles = toItem("aeronautics:aviators_goggles");
-    const mekanismScubaMask = toItem("mekanism:scuba_mask");
+    addItemsToSlot(event, faceSlot, [
+      toItem("create:goggles"),
+      toItem("createthrusters:physics_goggles"),
+      itemTag("#advancedperipherals:smart_glasses")
+    ]);
     addItemsToSlot(event, headSlot, [
-      conductorCaps,
-      aviatorGoggles,
-      mekanismScubaMask
+      itemTag("#railways:conductor_caps"),
+      toItem("aeronautics:aviators_goggles"),
+      toItem("mekanism:scuba_mask"),
+      toItem("createthrusters:pilot_cap")
     ]);
     const mekanismFreeRunners = toItem("mekanism:free_runners");
     addItemsToSlot(event, feetSlot, [mekanismFreeRunners]);

@@ -28,6 +28,10 @@
 	# Default: 64
 	# Range: 1 ~ 64
 	physicsGantryBeltWheelMaxDistance = 64
+	#How many ticks a virtual orientation source remains active without an update
+	# Default: 40
+	# Range: 1 ~ 1200
+	virtualOrientationSourceTimeoutTicks = 40
 
 	#Server-owned content availability. Clients use these values while connected.
 	[server.features]

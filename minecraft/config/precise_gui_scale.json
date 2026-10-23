@@ -1,7 +1,7 @@
 {
   "inGameScale": 2.5,
   "hotbarScale": 3.0,
-  "chatScale": 3.4,
+  "chatScale": 3.0,
   "inventoryScale": 3.0,
-  "menuScale": 2.58
+  "menuScale": 2.0
 }

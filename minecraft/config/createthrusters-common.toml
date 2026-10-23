@@ -73,7 +73,7 @@
 
 	#Gyroscope and gearbox controls
 	[common.gearbox]
-		#Maximum static per-face angle reported by the bi-directional gearbox from gyro input
+		#Default per-face angle limit for gyro input; explicit Smart Gearbox face limits override this value
 		# Default: 90.0
 		# Range: 1.0 ~ 180.0
 		gearboxMaxStaticAngleDeg = 90.0

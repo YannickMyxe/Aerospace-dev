@@ -1,25 +1,25 @@
 {
   "PROPULSION": {
-    "x": 107,
-    "y": 252,
-    "width": 132,
+    "x": 0,
+    "y": 298,
+    "width": 136,
     "height": 57,
     "userPlaced": true,
     "visible": true
   },
   "FORCE_GIZMO": {
-    "x": 386,
-    "y": 241,
+    "x": 585,
+    "y": 176,
     "width": 124,
     "height": 62,
     "userPlaced": true,
     "visible": true
   },
   "DIAGRAM": {
-    "x": 471,
-    "y": 25,
-    "width": 160,
-    "height": 111,
+    "x": 518,
+    "y": 13,
+    "width": 193,
+    "height": 134,
     "userPlaced": true,
     "visible": true
   },
