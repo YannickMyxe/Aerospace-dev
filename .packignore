@@ -2,12 +2,15 @@
 .idea
 local-minecraft-server
 minecraft/.github
+minecraft/.idea
 minecraft/.probe
 minecraft/.vscode
 minecraft/TrashSlotSaveState.json
 minecraft/XaeroWaypoints_BACKUP240807
 minecraft/audio_providers
 minecraft/command_history.txt
+minecraft/config/CSC/CSC_Warn.log
+minecraft/config/CSC/Log
 minecraft/debug
 minecraft/downloads
 minecraft/kubejs/server_scripts_ts

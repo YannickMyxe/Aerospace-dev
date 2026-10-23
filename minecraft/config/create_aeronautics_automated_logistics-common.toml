@@ -119,7 +119,6 @@
 	logisticsTerminalAccess = "OWNER_AND_TEAM"
 	#Require players to crouch while mining Airship Stations and Ship Transponders, because breaking them removes related routes.
 	requireCrouchToBreakRouteBlocks = true
-
 [debug]
 	#Master switch for automated logistics debug logging.
 	#When false, all category debug logs below are disabled.

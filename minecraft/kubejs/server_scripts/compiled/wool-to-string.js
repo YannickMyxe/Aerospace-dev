@@ -78,7 +78,9 @@
           isFluidStack(fluid) ? toKubeJSFluidStack(fluid) : fluid,
           serializeInput(ingredient)
         ]
-      )
+      ),
+      crushing: (results, ingredients) => api.crushing(serializeOutputs(results), ingredients),
+      milling: (results, ingredients) => api.milling(serializeOutputs(results), ingredients)
     };
   };
 

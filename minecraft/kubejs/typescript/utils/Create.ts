@@ -27,6 +27,8 @@ export type CreateMixingRecipe = CreateProcessingRecipe & {
 };
 
 export type CreateFillingRecipe = CreateProcessingRecipe;
+export type CreateCrushingRecipe = CreateProcessingRecipe;
+export type CreateMillingRecipe = CreateProcessingRecipe;
 
 export type CreateRecipeApi = {
     cutting(
@@ -42,12 +44,22 @@ export type CreateRecipeApi = {
         fluid: FillingFluid,
         ingredient: ItemIngredient | ItemOrTag | ItemStack,
     ): CreateFillingRecipe;
+    crushing(
+        results: CreateOutput,
+        ingredient: ItemIngredient | ItemOrTag | ItemStack,
+    ): CreateCrushingRecipe;
+    milling(
+        results: CreateOutput,
+        ingredient: ItemIngredient | ItemOrTag | ItemStack,
+    ): CreateMillingRecipe;
 };
 
 type RawCreateRecipeApi = {
     cutting(results: unknown, ingredient: unknown): CreateProcessingRecipe;
     mixing(results: unknown, ingredient: unknown): CreateMixingRecipe;
     filling(results: unknown, ingredients: unknown): CreateFillingRecipe;
+    crushing(results: unknown, ingredients: unknown): CreateCrushingRecipe;
+    milling(results: unknown, ingredients: unknown): CreateMillingRecipe;
 };
 
 const serializeOutput = (value: unknown): unknown => {
@@ -102,5 +114,7 @@ export const createRecipeApi = (recipes: unknown): CreateRecipeApi => {
                     serializeInput(ingredient)
                 ]
             ),
+        crushing: (results, ingredients) => api.crushing(serializeOutputs(results), ingredients),
+        milling: (results, ingredients) => api.milling(serializeOutputs(results), ingredients),
     };
 };
